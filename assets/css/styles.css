@@ -232,11 +232,13 @@ article h5:nth-of-type(1) {}
 
 footer {
   font-size: 16px;
-  padding-top: 14px;
+  padding-top: 32px;
   border-top: 1px solid #444;
   line-height: 20px;
+  text-align: center;
 }
 
-.site-footer {
-  background-color: cyan;
+a.no-border {
+  border: 0;
+  box-shadow: #E7F1F6 0px -3px 0px 0px inset;
 }
