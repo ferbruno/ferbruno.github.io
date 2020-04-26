@@ -25,7 +25,7 @@ Pareciera imposible querer justificar el nacimiento de Internet y los nuevos med
 La "realidad" sin embargo nos interesa solo a medias y por esa razón esta obra es para mí el inicio de Internet. Sí, no me malentiendan, exactamente eso. El huevo, el símbolo por excelencia de la posibilidad de un lenguaje privado en la época victoriana –Humpty Dumpty– es por partes iguales el contenedor de toda la información (genética) que se necesita para la vida y el mayor enunciado de un nuevo comienzo. Por esa razón, el mundo fuera del huevo es una suerte de sirena digital, mitad cibernética, mitad idiotez. Esa mezcla de idiotez mediática es uno de los mayores logros del arte desde la segunda mitad del siglo veinte hasta hoy.
 
 ![Chus Martinez – La era metabólica]({{ site.baseurl }}/images/Peralta-Ramos-Nosotros-afuera.jpg)
-*Federico Manuel Peralta Ramos. _Nosotros afuera_, 1965.*
+*Federico Manuel Peralta Ramos. Nosotros afuera, 1965.*
 
 A ustedes igual les parece que desfiguro la realidad, pero es precisamente ese proceso de desfiguracion de lo real lo que define la investigación en el terreno artístico. La desfiguración de los lenguajes artísticos, estéticos, informativos, linguísticos, sociales y materiales en una actividad que el arte realiza de un modo continuo sin hacer mucho ruido, por lo bajito, y que tiene un efecto mayúsculo en la transformación de nuestros sentidos, de nuestra forma de percibir y, por tanto, de pensar.
 
