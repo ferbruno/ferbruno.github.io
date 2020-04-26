@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "es" }}">
+
+{% include head.html %}
+
+<body>
+  <div class="wrapper">
+
+    <header class="site-header" role="banner">
+      <h1><a href="{{ site.url }}">Fernando Bruno</a></h1><span>. Artículos, traducciones y edición</span>
+    </header>
+    <main class="page-content" aria-label="Content">
+      {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+  </div>
+</body>
+
+</html>
