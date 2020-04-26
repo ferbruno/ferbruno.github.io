@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Byung Chul Han y la expansión global del shanzai"
-date:   2020-02-21 16:28:59 -0300
+date:   2016-12-09 16:28:59 -0300
 categories: articulos
 tags: Byung Chul Han, shanzai
 author: Fernando Bruno
