@@ -3,7 +3,7 @@ layout: single
 title:  "La era metabólica"
 date:   2016-12-09 16:28:59 -0300
 categories: edición
-tags: Chus Martínez, Federico Manuel Peralta Ramos, Petra Cortright, Takeshi Murata
+tags: [Chus Martínez, Federico Manuel Peralta Ramos, Petra Cortright, Takeshi Murata]
 author: Fernando Bruno
 excerpt: En el marco de la exhibición La era metabólica, curada por Chus Martínez en Malba, desarrollamos un micrositio que amplía la tesis curatorial de la muestra con diferentes ensayos sobre la era metabólica, materiales teóricos y referencias a artistas y pensadores presentes en su investigación. También se incluyen perfiles de cada uno de los artistas y sus obras en la exposición..
 ---

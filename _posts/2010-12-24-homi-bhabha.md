@@ -3,7 +3,7 @@ layout: single
 title:  "Entrevista con Homi K. Bhabha"
 date:   2010-12-24 16:28:59 -0300
 categories: entrevistas
-tags: Homi K. Bhabha, globalización, poscolonialismo
+tags: [Homi K. Bhabha, globalización, poscolonialismo]
 author: Fernando Bruno
 excerpt: Homi K. Bhabha es una de las figuras más importantes en el área de los estudios poscoloniales. Formado principalmente en literatura inglesa –si bien es originario de la India, desarrolló sus estudios de posgrado en la Universidad de Oxford–, su interés principal es el ámbito de las humanidades, en el que las historias materiales de los diferentes países y civilizaciones se cruzan con los imaginarios, las utopías y las narraciones, con las reflexiones conceptuales pero también con las producciones ficcionales.
 ---

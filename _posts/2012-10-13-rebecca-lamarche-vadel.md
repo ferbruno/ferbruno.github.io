@@ -3,7 +3,7 @@ layout: single
 title:  "Entrevista con Rebecca Lamarche-Vadel"
 date:   2012-10-13 16:28:59 -0300
 categories: entrevistas
-tags: Rebecca Lamarche-Vadel, Palais de Tokyo, arte contemporáneo
+tags: [Rebecca Lamarche-Vadel, Palais de Tokyo, arte contemporáneo]
 author: Fernando Bruno
 excerpt: La influencia de las tecnologías y de los medios de comunicación digitales se ha combinado con diversos factores, para terminar configurando un cuadro de extrema incertidumbre. Defensores y detractores de las prácticas contemporáneas debaten como nunca antes sobre su pertinencia, mientras que el público de los museos y galerías se enfrenta atónito con objetos, instalaciones y experiencias que a menudo no sabe cómo decodificar. En este contexto, los curadores han asumido un rol excepcionalmente importante. Organizando discursos, señalando tendencias o, en el peor de los casos, funcionando como indicadores y legitimadores de los caprichos del mercado.
 ---

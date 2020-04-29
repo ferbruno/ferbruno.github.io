@@ -3,7 +3,7 @@ layout: single
 title:  "Gustave Doré, entre el romanticismo y la reproducción mecánica de las artes"
 date:   2009-06-21 16:28:59 -0300
 categories: articulos
-tags: Gustave Doré, grabado
+tags: [Gustave Doré, grabado]
 author: Fernando Bruno
 excerpt: La obra de Gustave Doré, pero también su vida, refleja, traduce y, al mismo tiempo, produce la sensibilidad artística de su época; una sensibilidad que trabajosamente hacía pie en medio del surgimiento de la industria moderna, los conatos de restauración monárquica, las tendencias opuestas hacia el romanticismo y el realismo y la transformación radical de las bellas artes por parte de las primeras experiencias de reproducción y difusión masivas. Es la era de Charles Baudelaire y de Gustave Eiffel, de Jean-François Millet y de Honoré Daumier. Doré encarna, quizás como nadie, estas tensiones.
 ---

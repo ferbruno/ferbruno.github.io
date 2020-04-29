@@ -3,7 +3,7 @@ layout: single
 title: "Manuel Esnoz en Dabbah Torrejón"
 date: 2007-04-07 16:28:59 -0300
 categories: articulos
-tags: Manuel Esnoz, pintura, reseña
+tags: [Manuel Esnoz, pintura, reseña]
 author: Fernando Bruno
 excerpt: Siendo uno de los artistas más reconocidos de su generación, Manuel Esnoz ha seguido todos los pasos que un artista exitoso debe dar. Obtuvo becas a temprana edad, vendió sus obras en Nueva York, realizó residencias en Europa y ganó premios de la crítica, sin por eso quedar atrapado en los clichés que supone ser un artista inserto en el mercado internacional.
 ---

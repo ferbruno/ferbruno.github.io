@@ -3,7 +3,7 @@ layout: single
 title:  "Karl Löwith, antes y después de 1933"
 date:   2007-01-20 16:28:59 -0300
 categories: articulos
-tags: Karl Löwith, Martin Heidegger
+tags: [Karl Löwith, Martin Heidegger]
 author: Fernando Bruno
 excerpt: La crítica de Karl Löwith a la filosofía de Heidegger apunta al centro de la teoría de Ser y tiempo, a los problemas propios de las nociones de existencia y temporalidad tal como son trabajadas en ese texto y sus posibles consecuencias prácticas, sosteniendo que la filosofía de Heidegger coincide esencialmente con su actitud política.
 ---

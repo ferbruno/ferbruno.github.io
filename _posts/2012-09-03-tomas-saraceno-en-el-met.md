@@ -3,7 +3,7 @@ layout: single
 title:  "Tomás Saraceno en el MET"
 date:   2012-09-03 16:28:59 -0300
 categories: articulos
-tags: Peter Sloterdijk, Tomás Saraceno, Gyula Kosice
+tags: [Peter Sloterdijk, Tomás Saraceno, Gyula Kosice]
 author: Fernando Bruno
 excerpt: Formado en arquitectura en nuestro país, Saraceno ha estudiado arte en la Escuela de Bellas Artes Ernesto de la Cárcova y en la Staatliche Hochschule de Fráncfort, pero no necesariamente esa educación formal sea la que mejor explique su obra. Interesado por la tecnología y, en particular, por la astrofísica, sus trabajos siempre han estado marcados por una fuerte impronta constructivista y experimental, en el sentido más científico en el que pueda entenderse este último término.
 ---

@@ -3,7 +3,7 @@ layout: single
 title:  "Cultura de la congestión vs. cultura de la circulación: Rem Koolhaas lee a Le Corbusier"
 date:   2010-07-14 16:28:59 -0300
 categories: articulos
-tags: Rem Koolhaas, Le Corbusier, arquitectura, urbanismo
+tags: [Rem Koolhaas, Le Corbusier, arquitectura, urbanismo]
 author: Fernando Bruno
 excerpt: Este artículo busca revisar sucintamente dos modelos de ciudad largamente discutidos y las dos culturas contrapuestas que se derivan de ellos. En primer lugar, el modelo de la ciudad radiante, propuesto por Le Corbusier alrededor de los años treinta como solución para los problemas de higiene, salud y vivienda generados por el exponencial crecimiento de las urbes modernas a partir de la segunda mitad del siglo XIX y que, basado en el “rascacielos cartesiano”, constituyó una defensa de “la cultura de la circulación”. En segundo lugar, el modelo expuesto por Rem Koolhaas en su ya clásico libro Delirious New York de 1978, que rescata el caótico desarrollo urbano acontecido en la isla de Manhattan durante el primer tercio del siglo XX, definiendo “la cultura de la congestión”..
 ---

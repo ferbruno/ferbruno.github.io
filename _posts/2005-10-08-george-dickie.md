@@ -3,7 +3,7 @@ layout: single
 title:  "George Dickie y la teoría institucional del arte"
 date:   2005-10-08 16:28:59 -0300
 categories: articulos
-tags: George Dickie, teoría institucional
+tags: [George Dickie, teoría institucional]
 author: Fernando Bruno
 excerpt: La teoría institucional del arte, tal como ha sido desarrollada por George Dickie, sostiene que “las obras de arte son aquellos artefactos que han adquirido un cierto status dentro de un marco institucional particular llamado el mundo del arte”. Ahora bien, ¿qué implicancias tiene esta definición?
 ---

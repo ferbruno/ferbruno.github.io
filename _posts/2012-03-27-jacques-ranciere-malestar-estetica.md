@@ -3,7 +3,7 @@ layout: single
 title:  "Jacques Rancière: el malestar en la estética"
 date: 2012-03-27 16:28:59 -0300
 categories: articulos
-tags: Jacques Rancière, libros, reseñas
+tags: [Jacques Rancière, libros, reseñas]
 author: Fernando Bruno
 excerpt: El malestar en la estética, recientemente editado en nuestro país, es, por supuesto, un libro sobre teoría estética, pero, siendo su autor Jacques Rancière, es también un tratado político, en la medida en que para el filósofo francés es imposible pensar ambos ámbitos de modo separado en la época moderna.
 ---
