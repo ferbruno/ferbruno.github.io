@@ -105,6 +105,9 @@ h6 {
   font-weight: 400;
 }
 
+br.mobile-break { display: none; }
+
+
 a {
   color: #444;
   text-decoration: none;
@@ -144,18 +147,24 @@ header h1 {
   font-weight: 700;
 }
 
-header h1 a {
+header a {
   box-shadow: #E7F1F6 0px -3px 0px 0px inset;
   border-bottom: #E7F1F6;
 }
 
-header h1 a:hover {
+header a:hover {
   background-color: #E7F1F6;
-  color: #222;
+  color: #000;
 }
 
+header span.icon {
+  font-size:18px;
+}
+
+span.versalita { margin-left: 187px; }
+
 div.front {
-  margin-bottom: 96px;
+  margin-bottom: 72px;
 }
 
 div.fotos {
@@ -209,7 +218,7 @@ article:last-of-type, ul.post-list li:last-of-type {
 }
 
 p.post-excerpt {
-  margin-bottom: 72px;
+  margin-bottom: 64px;
 }
 
 article h4 {
@@ -219,7 +228,7 @@ article h4 {
   text-align: center;
 }
 
-article h5 {
+article h5, .versalita {
   letter-spacing: .05em;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 16px;
@@ -243,14 +252,35 @@ a.no-border {
   box-shadow: #E7F1F6 0px -3px 0px 0px inset;
 }
 
-@media only screen and (max-width: 600px) {
+a.no-border:hover {
+  background-color: #E7F1F6;
+}
+
+ul.tag-list {
+margin-bottom: 96px;
+}
+
+ul.tag-list li {
+  margin-bottom: 24px;
+}
+
+ul.tag-list li span {
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px) {
   div.wrapper {
-  padding: 12px 24px 48px 24px;
+  padding: 12px 36px 48px 36px;
   }
   header {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 48px;
   }
 
-  header h1 {
+  header span {
+    display: none;
   }
+
+  br.mobile-break { display: block; }
 }

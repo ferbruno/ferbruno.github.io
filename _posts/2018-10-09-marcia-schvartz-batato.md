@@ -3,7 +3,7 @@ layout: single
 title:  "Batato, de Marcia Schvartz"
 date:   2018-10-09 16:28:59 -0300
 categories: articulos
-tags: [Marcia Schvartz, Batato Barea]
+tags: [Marcia Schvartz, Batato Barea, home]
 author: Fernando Bruno
 excerpt: En el contexto del resurgimiento de la pintura en la década del 80 –una tendencia que con diferentes denominaciones se dio en muchos países y que también fue decisiva en la Argentina–, Marcia Schvartz construyó una obra sumamente personal que conjuga ciertos elementos clásicos de la tradición pictórica del siglo XX con un elenco de personajes y temas típicamente locales.
 ---

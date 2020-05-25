@@ -23,7 +23,7 @@ email: contactofbruno@gmail.com
 description:  Investigación, traducción y edición en el área de la historia y la teoría del arte.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+permalink: /:categories/:title/
 # Build settings
 theme: minima
 plugins:

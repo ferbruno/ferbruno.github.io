@@ -1,0 +1,16 @@
+---
+layout: default
+tag: edicion
+permalink: /edicion/
+title: Edición
+---
+
+<div class="home">
+
+<ul class="tag-list">
+  {% for post in site.categories.edicion %}
+  <li><span>{{ post.title }}. </span>{{ post.excerpt }} <a href="{{ post.url }}" class="no-border">[+]</a></li>
+  {% endfor %}
+</ul>
+
+</div>

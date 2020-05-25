@@ -2,8 +2,8 @@
 layout: single
 title:  "Arte Duty Free, de Hito Steyerl"
 date:   2018-05-09 16:28:59 -0300
-categories: articulos
-tags: Hito Steyerl
+categories: traducciones
+tags: [Hito Steyerl, home]
 author: Fernando Bruno
 excerpt: Steyerl intenta dilucidar los complejos mecanismos a través de los cuales la pulsión destructiva del capital se inscribe en la superficie de las imágenes y le da forma a una nueva institucionalidad artística. Si los museos cosmopolitas y las bienales en países emergentes encarnaban los sueños del capitalismo globalizado, los espacios artísticos convertidos en centros de refugiados y los bunkers offshore que alojan obras de arte como reserva de valor financiero a espaldas del público acaso sean figuras institucionales más adecuadas para un tiempo en el que las promesas liberales se fracturaron arrojándonos a un oscuro escenario de conflictividad global.
 ---

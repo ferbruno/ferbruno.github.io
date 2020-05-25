@@ -3,7 +3,7 @@ layout: single
 title:  "Entrevista con Claire Bishop"
 date:   2018-07-13 16:28:59 -0300
 categories: entrevistas
-tags: Claire Bishop
+tags: [Claire Bishop, home]
 author: Fernando Bruno
 excerpt: Como anticipo de la videoconferencia que brindará el sábado 14 de julio en el Departamento de Arte de la Universidad Torcuato Di Tella –en el marco de las jornadas "Inminencias. El arte frente a la crisis ecológica y la duplicación digital del mundo", que también contarán con la presencia de un nutrido elenco de invitados locales e internacionales, como Carolyn Christov-Bakargiev, Éric Sadin y Franco “Bifo” Berardi–, conversé con Bishop sobre el desafío que plantean las nuevas tecnologías para el arte contemporáneo y la crítica cultural.
 ---

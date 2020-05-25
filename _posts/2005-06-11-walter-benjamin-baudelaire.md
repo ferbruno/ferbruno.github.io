@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Walter Benjamin, Baudelaire y la Obra de los pasajes"
-date:   2005-06-11 16:28:59 -0300
-categories: articulos
+date:   2005-02-26 16:28:59 -0300
+categories: artículos
 tags: [Walter Benjamin, Charles Baudelaire]
 author: Fernando Bruno
 excerpt: Durante la segunda mitad de la década del treinta, Walter Benjamin se encontraba exiliado en París, donde llevó adelante un exhaustivo trabajo de investigación sobre la problemática filosófica y social plasmada en ese centro urbano bajo el Segundo Imperio (1852-1870). Su análisis partía del diagnóstico de que "el capitalismo fue un fenómeno natural por el cual un encantamiento nuevo, lleno de sueños, se abatió sobre Europa, acompañado de una reactivación de las fuerzas míticas".

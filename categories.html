@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /categories/
+title: Categories
+---
+
+
+<div class="front">Este sitio reúne algunos trabajos recientes que realicé para diferentes instituciones, editoriales y publicaciones. Entre otros, aparecen proyectos que coordiné para <a href="https://malba.org.ar">Malba</a>, donde actualmente me desempeño como editor de contenidos web, ensayos escritos para la plataforma <a href="https://post.at.moma.org/profiles/2282-fernando-bruno">Post at MoMA</a>, traducciones para <a href="https://cajanegraeditora.com.ar">Caja Negra</a>, trabajos de edición como el catálogo de la <a href="http://bienalbp.org/bp15/es/">Bienal de Performance 2015</a> y artículos y entrevistas publicados en diferentes revistas argentinas e internacionales. Aquí abajo, una breve selección para navegar.
+
+</div>
+
+
+<div id="archives">
+{% for category in site.categories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <p></p>
+
+    <h3 class="category-head">{{ category_name }}</h3>
+    <a name="{{ category_name | slugize }}"></a>
+    {% for post in site.categories[category_name] %}
+    <article class="archive-item">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </article>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>

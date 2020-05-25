@@ -3,7 +3,7 @@ layout: single
 title:  "Byung Chul Han y la expansión global del shanzai"
 date:   2016-12-09 16:28:59 -0300
 categories: articulos
-tags: [Byung Chul Han, shanzai]
+tags: [Byung Chul Han, shanzai, home]
 author: Fernando Bruno
 excerpt: La expansión global del shanzhai como paradigma productivo posiblemente sea uno de los fenómenos culturales más relevantes de las últimas décadas. Surgido en China, este modelo de práctica creativa influye hoy de un modo inconmensurable en una generación de artistas, curadores y pensadores, dispersos en todas partes del mundo y formados en tumblr, Snapchat y Tinder.
 ---

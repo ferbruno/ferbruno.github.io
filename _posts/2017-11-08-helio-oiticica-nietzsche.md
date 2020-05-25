@@ -3,7 +3,7 @@ layout: single
 title:  "Nietzchean Yearnings: The Theoretical Foundations of Brazilian artist Hélio Oiticica"
 date: 2017-11-08 16:28:59 -0300
 categories: articulos
-tags: [Hélio Oiticica, Friedrich Nietzsche]
+tags: [Hélio Oiticica, Friedrich Nietzsche, home]
 author: Fernando Bruno
 excerpt: Besides the influence of the Neo-Concrete movement, Oiticia’s artistic career was marked by the intellectual tradition of his family as well as lectures on classic and modern philosophy. A figure whose name appears time after time in Oiticica’s texts and whose influence is felt throughout his work is Friedrich Nietzsche. Oiticica himself acknowledged the German philosopher’s decisive influence. “I’m son of Nietzsche and step-son of Artaud,” he retrospectively claimed in 1978.
 ---

@@ -3,7 +3,7 @@ layout: single
 title:  "Smiljan Radic y el pabellón para la Serpentine Gallery"
 date:   2014-11-09 16:28:59 -0300
 categories: articulos
-tags: [Smiljan Radic, Serpentine Gallery, arquitectura, arte contemporáneo]
+tags: [Smiljan Radic, Serpentine Gallery, arquitectura, arte contemporáneo, home]
 author: Fernando Bruno
 excerpt: La Serpentine Gallery es un espacio de arte contemporáneo ubicado en los jardines de Kensington, dentro del Hyde Park londinense. Cada año, desde 2000, las autoridades de la galería han comisionado a una persona diferente la construcción de un pabellón temporario de verano. El edificio debe ser emplazado en los espacios verdes que rodean al predio permanente, por lo que su concreción supone siempre el desafío de establecer un diálogo productivo entre la nueva construcción y la naturaleza circundante. Este año, el elegido es el chileno Smiljan Radic, figura de larga trayectoria en su país que se une así a una familia de grandes arquitectos y artistas.
 ---

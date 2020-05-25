@@ -3,9 +3,9 @@ layout: single
 title:  "Un pálido ojo amarillo abierto"
 date:   2008-08-10 16:28:59 -0300
 categories: blog
-tags: [robots, máquinas, tecnología, monstruos]
+tags: [robots, máquinas, tecnología, monstruos, drafts]
 author: Fernando Bruno
-excerpt: Último momento, indica la edición digital de este diario. Ingenieros japoneses presentan 'Repliee R-1', la primera nena robot, que con la apariencia de una niña de 5 años, fue pensada para ayudar y acompañar a personas mayores y discapacitados motores. La imagen de la ¿nena? es realmente perturbadora y los comentarios en la página de YouTube que aloja el video no se hicieron esperarRecuerdo inmediatamente el relato del Prometeo moderno de Mary Shelley y la reacción del estudiante de medicina Victor Frankenstein al culminar su truculento experimento extracurricular.
+excerpt: Ingenieros japoneses presentan a 'Repliee R-1', un robot que con la apariencia de una niña de 5 años fue pensado para ayudar y acompañar a personas mayores y discapacitados motores.
 ---
 
 "Último momento" –indica la [edición digital de este diario](http://www.clarin.com/diario/2008/10/07/um/m-01776450.htm). "Ingenieros japoneses presentan 'Repliee R-1', la primera nena robot". Y aclara en la bajada: "con la apariencia de una niña de 5 años, fue pensada para ayudar y acompañar a personas mayores y discapacitados motores". La imagen de la ¿nena? es realmente perturbadora y los comentarios en la página de YouTube que aloja el video no se hicieron esperar: “Dios nos ayude”; “Es un asco”; “Horror”; “¿Por qué un robot tiene que parecerse a un humano?”; “Sólo falta un día para Skynet”; “Para robot demasiado real y como nena tiene ‘algo’ que da miedo”; y así sucesivamente.
