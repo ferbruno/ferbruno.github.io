@@ -299,17 +299,15 @@ section#streaming {
     justify-content: center;
     }
 
+    section#streaming h2 {
+margin-bottom: 0;
+}
+
 section#clientes {
     padding-bottom: 10%;
     padding-top: 5%;
     width: 85%;
     margin: 0 auto 100px auto;
-}
-
-section#clientes ul {
-font-size:  20.8px;
-text-align: center;
-margin: 0 auto;
 }
 
 section#tecnologia {
@@ -381,6 +379,12 @@ div.item-17 {
 
 div.item-17 img {
     margin: 0 auto;
+}
+
+section#clientes p {
+font-size:  20.8px;
+text-align: center;
+margin: 0 auto;
 }
 
 /* Galeria */
