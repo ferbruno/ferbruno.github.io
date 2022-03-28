@@ -13,7 +13,8 @@ body {
 }
 
 .content {
-    max-width: 1200px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /*------------ Variables ------------*/
@@ -27,16 +28,19 @@ body {
 
 /*------------- Header -------------*/
 
-header {
+.cabezal {
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 20px 0;
     position: fixed;
+    background-color: #fff;
+    top: 0;
+    transition: 0.3s;
 }
 
 .cabezal .caja {
-    width: var(--grande);
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -53,6 +57,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.dael {
+    top: -120px;
+}
+
 /*-------------- Menu --------------*/
 
 .menu {
@@ -63,12 +71,16 @@ h1 {
     display: none;
 }
 
-.menu li a:hover::before {
-    content: "> ";
+.menu li a {
+    color: #000;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #999;
 }
 
 .contacto-header {
-    width: var(--grande);
     margin: 0 auto 4% auto;
     padding-top: 460px;
 }
@@ -88,8 +100,8 @@ h1 {
 /*------------ Burger ------------*/
 
 #nav-icon3 {
-    margin-top: 38px;
     float: right;
+    margin-top: 38px;
     width: 30px;
     height: 22px;
     position: relative;
@@ -108,10 +120,10 @@ h1 {
 #nav-icon3 span {
     display: block;
     position: absolute;
-    height: 4px;
+    height: 2px;
     width: 100%;
     background: #000;
-    border-radius: 5px;
+    border-radius: 3px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -170,18 +182,16 @@ h1 {
 /*------------ Portada -------------*/
 
 .portada {
-    width: var(--grande);
-    margin: 0 auto 4% auto;
+    margin: 0 auto 12% auto;
     font-size: 1.8em;
 }
 
 .portada img {
-    max-width: 1280px;
     margin: 0 auto;
 }
 
 .copy-portada {
-    width: var(--chico);
+    width: 60%;
     margin: 0 auto;
     margin-bottom: var(--margen-seccion);
 }
@@ -247,6 +257,7 @@ section h2 {
 #clientes .caja {
     width: var(--grande);
     margin: 0 auto;
+    max-width: 1280px;
 }
 
 .marcas {
@@ -275,6 +286,7 @@ footer .caja {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 70px 0;
+    max-width: 1280px;
 }
 
 .colofon-1 {
