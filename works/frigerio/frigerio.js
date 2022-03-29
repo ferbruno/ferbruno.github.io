@@ -12,6 +12,17 @@
         });
     });
 
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#nav-icon3').removeClass('open');
+                $('.menu').removeClass('fondo');
+            } else {
+                $('.a').fadeIn();
+            }
+        });
+    });
+
     function isOnScreen(elem) {
 
         if (elem.length == 0) {
