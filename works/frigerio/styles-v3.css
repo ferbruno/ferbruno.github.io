@@ -13,7 +13,7 @@ body {
 }
 
 .content {
-    max-width: 1280px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .cabezal {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 20px 0;
     position: fixed;
@@ -82,7 +82,7 @@ h1 {
 
 .contacto-header {
     margin: 0 auto 4% auto;
-    padding-top: 460px;
+    padding-top: 540px;
 }
 
 .email {
@@ -257,7 +257,7 @@ section h2 {
 #clientes .caja {
     width: var(--grande);
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1140px;
 }
 
 .marcas {
@@ -286,7 +286,7 @@ footer .caja {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 70px 0;
-    max-width: 1280px;
+    max-width: 1140px;
 }
 
 .colofon-1 {
