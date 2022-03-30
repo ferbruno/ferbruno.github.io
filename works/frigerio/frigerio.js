@@ -3,16 +3,12 @@
             $(this).toggleClass('open');
             $('.menu').toggleClass('fondo');
         });
-    });
 
-    $(document).ready(function() {
         $('.menu li').click(function() {
             $('#nav-icon3').toggleClass('open');
             $('.menu').toggleClass('fondo');
         });
-    });
 
-    $(document).ready(function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 200) {
                 $('#nav-icon3').removeClass('open');
