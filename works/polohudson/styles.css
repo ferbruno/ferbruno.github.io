@@ -1,0 +1,317 @@
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #24292c;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    margin: 0 auto 10% auto;
+}
+
+section h2.titulo {
+    font-size: 3rem;
+    line-height: 1.15;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    max-width: 1140px;
+    padding: 0 2%;
+}
+
+h2.titulo span {
+    color: #ccc;
+}
+
+/*------------- Nav Bar -------------*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 3%;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-of-type {
+    margin-right: 0;
+}
+
+nav ul li a:hover {
+    color: #e64547;
+}
+
+#logo {
+    padding-top: 16px;
+}
+
+.logo-img {
+    height: 30px;
+}
+
+/*------------- Banner -------------*/
+
+section#banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner-cell {
+    width: 100%;
+}
+
+.cartel {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    color: white;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 1;
+    max-width: 60%;
+    color: #fff;
+}
+
+/*------------- Proyecto -------------*/
+
+section.modulo {
+    max-width: 750px;
+    text-align: center;
+}
+
+#proyecto {
+        padding-top: 50px;
+}
+
+/*------------- Cifras -------------*/
+
+section#cifras {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    padding: 0 2%;
+    text-align: center;
+}
+
+.item-cifras {
+    background-color: #3b3a47;
+    color: #fff;
+    width: 32%;
+    padding: 5% 1.6%;
+    border-bottom: 10px solid #e4221f;
+    margin-bottom: 2%;
+}
+
+p.cifra {
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+p.cifra sup {
+    font-size: 2rem;
+}
+
+p.detalle {
+    padding-bottom: 5%;
+}
+
+/*------------- Copy -------------*/
+
+section.copy {
+    margin: 0 auto;
+    margin-bottom: 12%;
+    max-width: 700px;
+    padding: 0 2%;
+}
+
+section.copy p {
+    font-size: 3rem;
+    line-height: 1.15;
+    font-weight: 200;
+}
+
+/*------------- Carrousel -------------*/
+
+section#carrousel {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 12%;
+}
+
+.carousel img {
+    display: block;
+    height: 400px;
+    margin-right: 1%;
+}
+
+/*------------- Mapa -------------*/
+
+section#mapa {
+    max-width: 1140px;
+    padding: 0 2%;
+    filter: grayscale(86%);
+    -webkit-filter: grayscale(86%);
+    -moz-filter: grayscale(86%);
+padding-top: 50px;
+}
+
+h2#titulo-mapa {
+    margin-bottom: 4%;
+}
+
+/*------------- Quienes -------------*/
+
+#quienes-somos {
+    padding-top: 50px;
+}
+
+#quienes-somos p {
+    max-width: 750px;
+    margin-bottom: 1rem;
+}
+
+
+/*------------- Contacto -------------*/
+
+
+#contacto {
+    padding-top: 50px;
+}
+
+div#formulario {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #3b3a47;
+    color: #fff;
+    border-radius: 7px;
+    margin-bottom: 10%;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 6%;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+label {
+    padding-left: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 250px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #30aab3;
+    outline: 0;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px;
+    width: 150px;
+    background-color: #e4221f;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d3d3d3;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #d3d3d3;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #d3d3d3;
+}
+
+/*------------ Brochure ------------*/
+
+section#brochure img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+}
+
+
+/*------------- Footer -------------*/
+
+footer {
+    background-color: #e2e1df;
+    padding: 3% 3% 6% 3%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.item-footer {
+    width: 20%;
+}
+
+/*------------- Queries -------------*/
+
+@media only screen and (max-width: 600px) {
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: none;
+    }
+}
