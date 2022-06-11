@@ -30,3 +30,13 @@ h2 {
 p {
 color: #f52d3c;
 }
+
+@media (max-width: 600px) {
+  header {
+    width: 85%;
+    margin: 10% auto 5.5% auto;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+}
