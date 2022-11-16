@@ -32,7 +32,8 @@ color: #2454FF;
   header {
     width: 85%;
     margin: 10% auto 5.5% auto;
-    font-size: 2.4rem;
-    line-height: 1;
+    font-size: 2.2rem;
+    line-height: 1;    
+    font-weight: 500;
     }
 }
