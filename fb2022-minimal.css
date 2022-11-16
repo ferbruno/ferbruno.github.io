@@ -3,20 +3,18 @@ body {
     line-height: 1.4;
     color: #444444;
     background-color: #F5F5F3;
-    font-weight: 300;
-    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
 }
-
-/* Header */
 
 header {
     width: 92%;
     margin: 4.8% auto 5.5% auto;
-    font-family: 'Roboto Serif', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 4.8rem;
     line-height: .95;
     letter-spacing: -2px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h1 {
