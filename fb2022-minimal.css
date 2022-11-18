@@ -3,7 +3,7 @@ body {
     line-height: 1.4;
     color: #444444;
     background-color: #F5F5F3;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
 }
 
@@ -12,8 +12,8 @@ header {
     margin: 4.8% auto 5.5% auto;
     font-family: 'Inter', sans-serif;
     font-size: 4.8rem;
-    line-height: 1;
-    font-weight: 500;
+    line-height: .96;
+    font-weight: 600;
 }
 
 h1 {
@@ -34,6 +34,6 @@ color: #2454FF;
     margin: 10% auto 5.5% auto;
     font-size: 2.2rem;
     line-height: 1;    
-    font-weight: 500;
+    font-weight: 600;
     }
 }
