@@ -54,7 +54,7 @@ nav ul li:last-of-type {
 }
 
 nav ul li a:hover {
-    color: #e64547;
+    color: #d6001c;
 }
 
 #logo {
@@ -62,7 +62,7 @@ nav ul li a:hover {
 }
 
 .logo-img {
-    height: 30px;
+    height: 26px;
 }
 
 /*------------- Banner -------------*/
@@ -80,7 +80,6 @@ section#banner {
     position: absolute;
     top: 6%;
     left: 3%;
-    color: white;
     font-size: 3rem;
     font-weight: 200;
     line-height: 1;
@@ -103,11 +102,12 @@ section.modulo {
 
 section#cifras {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1140px;
-    padding: 0 2%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-width: 1280px;
+    padding: 2%;
     text-align: center;
+    gap: 30px;
 }
 
 .item-cifras {
@@ -115,8 +115,7 @@ section#cifras {
     color: #fff;
     width: 32%;
     padding: 5% 1.6%;
-    border-bottom: 10px solid #e4221f;
-    margin-bottom: 2%;
+    border-bottom: 10px solid #d6001c;
 }
 
 p.cifra {
@@ -139,6 +138,7 @@ section.copy {
     margin-bottom: 12%;
     max-width: 700px;
     padding: 0 2%;
+    text-align: center;
 }
 
 section.copy p {
@@ -180,13 +180,17 @@ h2#titulo-mapa {
 
 #quienes-somos {
     padding-top: 50px;
+    max-width: 640px;
 }
 
 #quienes-somos p {
-    max-width: 750px;
     margin-bottom: 1rem;
 }
 
+#quienes-somos h5 {
+    margin-top: 2rem;
+    font-weight: 600;
+}
 
 /*------------- Contacto -------------*/
 
@@ -250,7 +254,7 @@ button {
     font-size: 1rem;
     padding: 10px;
     width: 150px;
-    background-color: #e4221f;
+    background-color: #d6001c;
     box-shadow: none;
     border: 0;
     outline: 0;
@@ -305,13 +309,58 @@ footer {
 
 /*------------- Queries -------------*/
 
-@media only screen and (max-width: 600px) {
-    nav {
+@media only screen and (max-width: 1239px) {
+    section#cifras {
+        flex-wrap: wrap;
+}
+
+.item-cifras {
+    background-color: #3b3a47;
+    color: #fff;
+    width: 48%;
+    padding: 5% 1.6%;
+    border-bottom: 10px solid #e4221f;
+}
+
+div#formulario {
+    width: 90%;
+}
+}
+
+@media only screen and (max-width: 765px) {
+
+    #nav-bar {
         display: block;
-        text-align: center;
+    }
+        h1#logo img {
+        display: block;
+        margin: 0 auto;
     }
 
     nav ul li {
         display: none;
     }
+    }
+
+
+@media only screen and (max-width: 600px) {
+
+    .item-cifras {
+    width: 100%;
+}
+    section {
+        width: 90%;
+    }
+
+    .carousel img {
+    height: 220px;
+}
+
+.cartel {
+    font-size: 2.2rem;
+    top: 8%;
+    left: 5%;
+    max-width: 80%;
+    font-weight: 400;
+}
 }
