@@ -304,8 +304,13 @@ footer {
 }
 
 .item-footer {
-    width: 20%;
+    width: 30%;
 }
+
+.item-footer:last-of-type {
+    text-align: right;
+}
+
 
 /*------------- Queries -------------*/
 
@@ -362,5 +367,13 @@ div#formulario {
     left: 5%;
     max-width: 80%;
     font-weight: 400;
+}
+
+.item-footer {
+    width: 100%;
+}
+
+.item-footer:last-of-type {
+    text-align: left;
 }
 }
