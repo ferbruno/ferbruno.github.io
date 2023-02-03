@@ -1,6 +1,6 @@
 ## Register Sidebar
 
-Add the following code in **functions.php**.
+Add the following code in `functions.php`.
 
 
 
