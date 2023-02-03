@@ -6,7 +6,7 @@ Use the following code:
 
 
 
-    function tuiti_sidebar_setup() {
+    function themename_sidebar_setup() {
 
     register_sidebar(array(
         'name' => 'Sidebar One',
@@ -32,7 +32,7 @@ Use the following code:
 
     }
 
-    add_action( 'widgets_init', 'tuiti_sidebar_setup' );
+    add_action( 'widgets_init', 'themename_sidebar_setup' );
     
     
 
