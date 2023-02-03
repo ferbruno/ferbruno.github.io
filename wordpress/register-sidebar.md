@@ -25,8 +25,6 @@ Print the sidebar in any template:
 
 ```
 <?php if ( is_active_sidebar( 'sidebar-one' ) ) : ?>
-	<div class="footer-menus-column">
-		<?php dynamic_sidebar( 'sidebar-one' ); ?>
-	</div>
+	<?php dynamic_sidebar( 'sidebar-one' ); ?>
 <?php endif; ?>
 ```
