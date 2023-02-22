@@ -6,9 +6,9 @@ Developed by Fernando Bruno
 */
 
 .super-root {
-    background-color: #e5e7ec !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
 }
 
 .notion-header {
@@ -22,7 +22,7 @@ Developed by Fernando Bruno
 .notion-header__title {
     font-size: 3.75rem !important;
     font-weight: 700 !important;
-    line-height: 1 !important;
+    line-height: 4rem;
 }
 
 .notion-quote {
@@ -33,25 +33,24 @@ Developed by Fernando Bruno
 }
 
 .notion-property__title__icon-wrapper {
-	display: none !important;
+    display: none !important;
 }
 
 .notion-collection-card {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .notion-property__title {
-	font-size: 2rem !important;
-	font-weight: 700 !important;
-	line-height: 1 !important;
-	margin: .6rem !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    margin: .6rem !important;
 }
 
 .notion-property__date {
-	font-size: .8rem !important;
+    font-size: .8rem !important;
     font-style: italic !important;
-	color: var(--color-text-gray) !important;
-	margin: 4px 0 !important;
+    margin: 4px 0 !important;
 }
 
 .notion-property__date:before {
