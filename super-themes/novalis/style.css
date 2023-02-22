@@ -6,7 +6,7 @@ Developed by Fernando Bruno
 */
 
 .super-root {
-    background-color: yellow;
+    background-color: lime;
     margin: 0;
     padding: 0;
 }
@@ -36,8 +36,21 @@ Developed by Fernando Bruno
     display: none !important;
 }
 
+.notion-collection-gallery {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+}
+
 .notion-collection__header-wrapper {
-    display: none;
+    display: none !important;
+}
+
+.notion-collection-card.gallery {
+    width: 47% !important;
+    margin-bottom: 3rem !important;
+	border-bottom: 2px solid var(--color-text-default) !important;
+	padding-bottom: 2rem !important;
 }
 
 .notion-collection-card {
