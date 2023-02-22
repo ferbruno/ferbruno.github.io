@@ -6,30 +6,30 @@ Developed by Fernando Bruno
 */
 
 .super-root {
-    background-color: #e5e7ec;
-    margin: 0;
-    padding: 0;
+    background-color: #e5e7ec !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .notion-header {
-    margin: 4.25rem auto;
-    padding-bottom: 4.25rem;
-    border-bottom: 1px solid #657786;
-    width: 75%;
-    max-width: 960px;
+    margin: 4.25rem auto !important;
+    padding-bottom: 4.25rem !important;
+    border-bottom: 1px solid #657786 !important;
+    width: 75% !important;
+    max-width: 960px !important;
 }
 
 .notion-header__title {
-    font-size: 3.75rem;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 3.75rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
 }
 
 .notion-quote {
-    width: 40%;
-    padding: 0;
-    margin: 0 auto 5rem auto;
-    border: 0;
+    width: 40% !important;
+    padding: 0 !important;
+    margin: 0 auto 5rem auto !important;
+    border: 0 !important;
 }
 
 .notion-property__title__icon-wrapper {
@@ -37,23 +37,23 @@ Developed by Fernando Bruno
 }
 
 .notion-collection-card {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .notion-property__title {
 	font-size: 2rem !important;
-	font-weight: 700;
-	line-height: 1;
-	margin: .6rem;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	margin: .6rem !important;
 }
 
 .notion-property__date {
-	font-size: .8rem;
-    font-style: italic;
-	color: var(--color-text-gray);
-	margin: 4px 0;
+	font-size: .8rem !important;
+    font-style: italic !important;
+	color: var(--color-text-gray) !important;
+	margin: 4px 0 !important;
 }
 
 .notion-property__date:before {
-    content: "—";
+    content: "—" !important;
 }
