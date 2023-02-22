@@ -36,6 +36,10 @@ Developed by Fernando Bruno
     display: none !important;
 }
 
+.notion-collection__header-wrapper {
+    display: none;
+}
+
 .notion-collection-card {
     box-shadow: none !important;
 }
