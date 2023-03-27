@@ -296,17 +296,29 @@ body {
         display: block;
     }
 
-    h1 {
-        line-height: 74px;
-        padding: 0;
-        color: var(--clr-black);
+    .site-title {
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        font-weight: 700;
+        text-align: center;
+        margin: 4vh 2% 1% 2%;
     }
 
-    .title {
-        font-size: 18px;
+    .site-description {
+        margin-top: 0;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 4%;
     }
 
     .grid {
-        padding: 1em 3% 6em 3%;
+        padding: 1em 4% 6em 4%;
+    }
+
+    .filters {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
     }
 }
