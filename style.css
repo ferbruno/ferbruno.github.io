@@ -1,0 +1,312 @@
+/*
+
+Developed by Fernando Bruno for his personal site
+https://ferbruno.github.io/
+
+*/
+
+/* Variables and Reset
+–––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+    --gap: 1.8em;
+    --columns: 5;
+    --clr-black-dark: #111;
+    --clr-black-light: #999;
+    --clr-grey-dark: #e5e5e5;
+    --clr-grey-light: #f2f2f2;
+    --clr-red-dark: #ec2b52;
+    --clr-red-light: #f7a9b9;
+    --clr-white: #fff;
+}
+
+html {
+    font-family:
+        -apple-system,
+        'Segoe UI',
+        Helvetica,
+        Arial,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-underline-offset: 4px;
+}
+
+a:visited {
+    color: #0000ee;
+}
+
+::-moz-selection {
+    color: var(--clr-black-dark);
+    background: yellow;
+}
+
+::selection {
+    color: var(--clr-black-dark);
+    background: yellow;
+}
+
+
+/* Layout and Grid
+–––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+    font-weight: 300;
+    min-height: 100vh;
+    font-size: 15px;
+    color: var(--clr-black-light);
+    letter-spacing: 0.01em;
+    background-color: var(--clr-white);
+    line-height: calc(1ex / 0.37);
+    text-rendering: optimizeLegibility;
+    padding: 0;
+    margin: 0;
+}
+
+.filters {
+    padding: 1em 3% 1em calc(60px + 3%);
+    border-bottom: 1px solid var(--clr-grey-light);
+}
+
+.grid {
+    margin: 0 auto;
+    display: column;
+    columns: var(--columns);
+    gap: var(--gap);
+    width: 100%;
+    padding: 2.9em 3% 10em calc(60px + 3%);
+}
+
+.grid>* {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+}
+
+@supports (grid-template-rows: masonry) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        grid-template-rows: masonry;
+        grid-auto-flow: dense;
+    }
+
+    .grid>* {
+        margin-bottom: var(--gap);
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+
+/* Header-Sidebar
+–––––––––––––––––––––––––––––––––––––––––– */
+
+.title-sidebar {
+    width: 60px;
+    position: fixed;
+    height: 100%;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    border-left: 1px solid var(--clr-grey-light);
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.site-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--clr-black-dark);
+}
+
+.site-description {
+    font-size: 14px;
+    margin-top: 14px;
+    line-height: 60px;
+}
+
+
+/* Filters
+–––––––––––––––––––––––––––––––––––––––––– */
+
+.post {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.filters {
+    text-align: right;
+}
+
+.btn {
+    color: var(--clr-black-light);
+    border: none;
+    outline: none;
+    margin-left: 6px;
+    background-color: white;
+    cursor: pointer;
+    text-align: right;
+    font-family:
+        -apple-system,
+        'Segoe UI',
+        Helvetica,
+        Arial,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+    font-size: 13px;
+    font-weight: 300 !important;
+}
+
+.btn:hover {
+    color: blue;
+}
+
+.btn.active {
+    font-weight: 500;
+    color: var(--clr-black-dark);
+}
+
+
+/* Posts
+–––––––––––––––––––––––––––––––––––––––––– */
+
+.post {
+    padding: 0 0 1.6rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--clr-grey-dark);
+    overflow: hidden;
+}
+
+.post-title,
+.post p {
+    padding: 0 1.5rem;
+}
+
+.post-title {
+    padding-top: 1.5rem;
+    font-weight: 500;
+    color: var(--clr-black-dark);
+    font-size: 15px;
+    line-height: calc(1ex / 0.37);
+}
+
+.post-content {
+    margin-top: 0;
+}
+
+.post img+p,
+.post img+h2 {
+    padding-top: 1.4em;
+}
+
+.post-metadata {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    margin-top: 12px;
+}
+
+.post-metadata span {
+    margin-right: 6px;
+}
+
+.post-metadata a {
+    color: var(--clr-black-light);
+}
+
+.post-metadata a:hover {
+    color: blue;
+}
+
+.symbol {
+    font-size: 15px;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (max-width: 1480px) {
+    :root {
+        --columns: 4;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    :root {
+        --columns: 3;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    :root {
+        --columns: 2;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    :root {
+        --columns: 1;
+    }
+
+    body {
+        font-size: 18px;
+        text-rendering: optimizeLegibility;
+        padding: 0;
+        margin: 0;
+    }
+
+    .title-sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        padding-top: 2em;
+        display: block;
+    }
+
+    h1 {
+        line-height: 74px;
+        padding: 0;
+        color: var(--clr-black);
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .grid {
+        padding: 1em 3% 6em 3%;
+    }
+}
