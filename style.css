@@ -321,4 +321,8 @@ body {
         padding-right: 0;
         text-align: center;
     }
+
+    .btn {
+    margin-left: 0;
+    }
 }
