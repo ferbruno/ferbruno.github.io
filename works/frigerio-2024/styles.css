@@ -66,8 +66,6 @@ body {
     --ancho-grande-maximo: 1280px;
     --ancho-mediano-maximo: 1140px;
     --ancho-chico-maximo: 750px;
-    --azul: #00468B;
-    --celeste: #3266db;
     --gris: #747A86;
     --negro: #1c222d;
 }
@@ -134,21 +132,18 @@ section p:last-of-type {
     display: none;
 }
 
-
-/* ADN
+/* Copy
 –––––––––––––––––––––––––––––––––––––––––– */
 
-#adn {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 250px;
-}
-
-.adn-header {
+#copy {
     width: var(--chico);
     max-width: var(--ancho-chico-maximo);
-    margin: 0 auto 120px auto;
+    margin: 0 auto 90px auto;
+    font-size: 1.6rem;
 }
+
+/* Carrousel 
+–––––––––––––––––––––––––––––––––––––––––– */
 
 .location {
     width: 100%;
@@ -160,10 +155,34 @@ section p:last-of-type {
     margin-right: 20px;
 }
 
-.valores {
-    margin: 60px 0 150px 0;
+
+/* ADN
+–––––––––––––––––––––––––––––––––––––––––– */
+
+#adn {
+    width: 100%;
+    margin-bottom: 250px;
+    width: var(--chico);
+    max-width: var(--ancho-chico-maximo);
+    margin: 120px auto 120px auto;
 }
 
+.valores {
+    font-size: 1.6rem; 
+}
+
+/* Quienes somos
+–––––––––––––––––––––––––––––––––––––––––– */
+
+#quienes-somos {       
+    width: var(--grande);
+    max-width: var(--ancho-grande-maximo);
+    margin: 120px auto 120px auto;
+}
+
+#quienes-somos h2 {
+    margin: 60px auto 60px auto;
+}
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––– */
@@ -273,7 +292,7 @@ footer {
 .nav-list {
     display: flex;
     gap: 0 40px;
-    font-size: 1rem;
+    font-size: 0.94rem;
     letter-spacing: -0.015em;
     text-transform: uppercase;
 }
@@ -290,7 +309,7 @@ footer {
 
 .nav-list a:hover,
 .nav-list a:focus {
-    color: var(--azul);
+    color: var(--negro);
 }
 
 .visually-hidden {
@@ -441,7 +460,7 @@ textarea {
     white-space: normal;
     line-height: 1;
     font-size: 16px;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Raleway', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 #fs-frm,
