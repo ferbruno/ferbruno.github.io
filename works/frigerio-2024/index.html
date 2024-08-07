@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Frigerio</title>
+    <meta name="description" content="Soluciones integrales para el mercado latinoamericano de broadcast y streaming profesional. Conexiones confiables desde cualquier país o locación.">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    
+    <header class="primary-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <h1>Estudio Frigerio</h1>
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <nav class="primary-navigation" id="primary-navigation">
+                    <ul aria-label="Primary" class="nav-list">
+                        <li><a href="#productos">Lista de obras</a></li>
+                        <li><a href="#nosotros">Quiénes somos</a></li>
+                        <li><a href="#fs-frm">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner -->
+    
+    <main>
+        <section id="logos">
+        </section>
+        <section id="banner">
+            <div class="banner" data-flickity='{ "wrapAround": true, "autoPlay": 3500, "prevNextButtons": false, "selectedAttraction": 0.01, "pauseAutoPlayOnHover": false, "draggable": false }'>
+                <div class="banner-cell"><img src="img/polo-hudson-header-1.jpg" alt="Dejero"></div>
+                <div class="banner-cell"><img src="img/polo-hudson-header-2.jpg" alt="Dejero"></div>
+                <div class="banner-cell"><img src="img/polo-hudson-header-3.jpg" alt="Dejero"></div>
+            </div>
+        </section>
+
+        <!-- ADN -->
+        
+        <section id="adn">
+            <div class="adn-header">
+                <h2>ADN</h2>
+                <p>Desde 1996 trabajamos ininterrumpidamente en Arquitectura Corporativa, especializándonos en proyecto, dirección y gerenciamiento de obras para las empresas más grandes de la Argentina. Orgullosos de participar tanto en el ámbito público como privado.</p>
+                <p class="valores">Atención personalizada <br>Flexibilidad <br>Respeto <br>Pasión profesional</p>
+            </div>
+            <div class="location" data-flickity='{ "wrapAround": true, "autoPlay": 2500, "prevNextButtons": false, "selectedAttraction": 0.025, "pauseAutoPlayOnHover": true, "draggable": true }'>
+                <div class="location-cell"><img src="img/frigerio-trabajos-1.webp" alt="Dejero"></div>
+                <div class="location-cell"><img src="img/frigerio-trabajos-2.webp" alt="Dejero"></div>
+                <div class="location-cell"><img src="img/frigerio-trabajos-3.webp" alt="Dejero"></div>
+                <div class="location-cell"><img src="img/frigerio-trabajos-4.webp" alt="Dejero"></div>
+                <div class="location-cell"><img src="img/frigerio-trabajos-5.webp" alt="Dejero"></div>
+                <div class="location-cell"><img src="img/frigerio-trabajos-6.webp" alt="Dejero"></div>
+            </div>
+        </section>
+    </main>
+   
+    <!-- Footer -->
+   
+    <footer id="footer">
+        <div class="pie">
+            <!-- Contact Form -->
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xnnaaddl" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">Nombre y Apellido</label>
+                    <input type="text" name="name" id="full-name" placeholder="Santiago López" required="">
+                    <label for="email-address">Email</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="slopez@email.com.ar" required="">
+                    <label for="message">Mensaje</label>
+                    <textarea rows="10" name="message" id="message" placeholder="Escriba su consulta y lo contactaremos a la brevedad." required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contacto desde WatchApp Web">
+                </fieldset>
+                <input type="submit" value="Enviar" id="submit-button">
+            </form>
+        </div>
+        <div class="colophon">
+            <p>Copyright &#169; Estudio Frigerio <script>
+                document.write(new Date().getFullYear());
+                </script>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
