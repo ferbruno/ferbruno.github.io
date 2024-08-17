@@ -67,6 +67,7 @@ body {
     --ancho-mediano-maximo: 1140px;
     --ancho-chico-maximo: 750px;
     --azul: #00468B;
+    --azul-oscuro: #001428;
     --celeste: #3266db;
     --gris: #747A86;
     --negro: #1c222d;
@@ -342,7 +343,7 @@ a.boton:hover {
     overflow: hidden;
     background-color: var(--celeste);
     color: #fff;
-    border: 1px solid var(--celeste);
+    border: 1px solid var(--azul-oscuro);
 }
 
 .item-productos-content {
@@ -356,16 +357,15 @@ a.boton:hover {
 a.link-producto {
     display: block;
     margin-top: 1em;
-    font-size: 12px;
+    font-size: 1rem;
+    color: #fff;
 }
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––– */
 
 footer {
-    background-image: url("img/footer-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: var(--azul-oscuro);
 }
 
 .pie {
@@ -373,21 +373,43 @@ footer {
     max-width: 500px;
     margin: 0 auto;
     color: #fff;
-    padding: 150px 0 180px 0;
+    padding: 90px 0 90px 0;
 }
 
 .colophon {
     color: #fff;
-    font-size: 14px;
-    line-height: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.7);
+    font-size: 1rem; 
+    background: #000;
 }
 
-.colophon p {
+.colophon-info {
     width: var(--grande);
     max-width: var(--ancho-grande-maximo);
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 80px;
+}
+
+.colophon-info div br {
+    display: none; 
+}
+
+.colophon strong {
+    font-weight: 700; 
+}
+
+.redes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+.redes img {
+    width: 40px;
+    height: 40px; 
+    margin-left: 3px; 
 }
 
 
@@ -439,6 +461,10 @@ footer {
         text-align: left;
     }
 
+    .conectividad-header br, #nosotros br, .colophon-info div span {
+        display: none; 
+    }
+
     .flex-wrapper>* {
         width: 100%;
     }
@@ -463,7 +489,33 @@ footer {
     width: 100%;
 }
 
-.slideshow{ height: 250px;  }
+    .slideshow { 
+    height: 250px;  
+}
+
+.colophon-info {
+    display: block;
+    height: auto;
+    padding: 50px 0; 
+}
+
+.colophon-info div br {
+    display: inline; 
+}
+
+.colophon-info div, .redes {
+    width: 100%;
+} 
+
+.redes {
+    justify-content: flex-start;
+    padding-top: 20px; 
+}
+
+.redes img {
+    margin-left: 0;
+    margin-right: 3px;  
+}
 
 }
 
