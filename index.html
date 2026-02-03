@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ferbruno.work">
+    <title>ferbruno.work</title>
+    
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Inter 900 con display=swap para optimizar carga -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset y box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Variables CSS */
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #000000;
+        }
+        
+        /* HTML y body al 100% */
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            /* Mejora de renderizado de fuentes */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        /* Hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height para móviles */
+            padding: 1rem;
+        }
+        
+        /* Texto principal con responsive font-size */
+        .hero__text {
+            font-weight: 900;
+            line-height: 1;
+            text-align: center;
+            letter-spacing: -0.05em;
+            /* Fluid typography usando clamp */
+            font-size: clamp(2.5rem, 8vw + 1rem, 12rem);
+            /* Prevenir overflow de texto largo */
+            word-break: break-word;
+            hyphens: auto;
+            /* Ajuste óptico - mover ligeramente hacia arriba */
+            transform: translateY(-8%);
+        }
+        
+        /* Optimización de performance */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero__text {
+                transform: translateY(-3%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="hero">
+        <h1 class="hero__text">ferbruno.work</h1>
+    </main>
+</body>
+</html>
