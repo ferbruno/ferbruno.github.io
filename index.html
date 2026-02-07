@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fernando Bruno - Estratega de comunicación digital especializado en contenidos, marketing y tecnología. Liderazgo de proyectos multimedia.">
+    <meta name="author" content="Fernando Bruno">
+    <meta property="og:title" content="Fernando Bruno - Comunicación Digital">
+    <meta property="og:description" content="Estrategias de comunicación digital. Contenidos, marketing y nuevas tecnologías.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ferbruno.work">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fernando Bruno - Comunicación Digital">
+    <meta name="twitter:description" content="Estrategias de comunicación digital: contenidos, marketing y nuevas tecnologías.">
+    <title>ferbruno.work</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts - Inter 300 y 900 con display=swap para optimizar carga -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP para animaciones glitch -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <style>
+        /* Reset y box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Variables CSS */
+        :root {
+            --color-bg: #ffffff;
+        }
+        
+        /* HTML y body al 100% */
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            /* Mejora de renderizado de fuentes */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        /* Hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 1rem;
+        }
+        
+        /* Contenedor de palabra para glitch */
+        .word-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            transform: translateY(-8vh);
+        }
+
+        .word {
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+
+        .char-wrapper {
+            display: inline-block;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        /* Texto principal con responsive font-size */
+        .char {
+            display: inline-block;
+            font-weight: 900;
+            line-height: 1;
+            text-align: center;
+            letter-spacing: -0.04em;
+            font-size: clamp(2.5rem, 8vw + 1rem, 12rem);
+            color: #000000;
+            position: relative;
+            will-change: transform, filter;
+        }
+
+        /* Efecto glitch */
+        .char.glitch {
+            animation: glitch-anim 0.3s infinite;
+        }
+
+        .char.rgb-split::before,
+        .char.rgb-split::after {
+            content: attr(data-char);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .char.rgb-split::before {
+            color: #ff00ff;
+            z-index: -1;
+            animation: glitch-before 0.3s infinite;
+        }
+
+        .char.rgb-split::after {
+            color: #00ffff;
+            z-index: -2;
+            animation: glitch-after 0.3s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes glitch-before {
+            0% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            20% { transform: translate(-5px, -5px); clip-path: polygon(0 10%, 100% 10%, 100% 30%, 0 30%); }
+            40% { transform: translate(5px, 5px); clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
+            60% { transform: translate(-5px, 5px); clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%); }
+            80% { transform: translate(5px, -5px); clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%); }
+            100% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+        }
+
+        @keyframes glitch-after {
+            0% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            20% { transform: translate(5px, 5px); clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
+            40% { transform: translate(-5px, -5px); clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%); }
+            60% { transform: translate(5px, -5px); clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%); }
+            80% { transform: translate(-5px, 5px); clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%); }
+            100% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1) 0px,
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 100;
+        }
+
+        .scanlines.active {
+            opacity: 0.3;
+        }
+
+        /* Top tagline sutil */
+        .top-tagline {
+            position: fixed;
+            top: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            color: #000000;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            z-index: 50;
+            text-shadow: 
+                0 0 15px rgba(255, 255, 0, 0.8),
+                0 0 30px rgba(255, 255, 0, 0.6),
+                0 0 45px rgba(255, 255, 0, 0.5);
+            animation: breatheGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes breatheGlow {
+            0%, 100% {
+                text-shadow: 
+                    0 0 15px rgba(255, 255, 0, 0.8),
+                    0 0 30px rgba(255, 255, 0, 0.6),
+                    0 0 45px rgba(255, 255, 0, 0.5);
+            }
+            50% {
+                text-shadow: 
+                    0 0 25px rgba(255, 255, 0, 1),
+                    0 0 50px rgba(255, 255, 0, 0.8),
+                    0 0 75px rgba(255, 255, 0, 0.6);
+            }
+        }
+        
+        /* Optimización de performance */
+        @media (prefers-reduced-motion: reduce) {
+            .char {
+                animation: none;
+            }
+            .char.glitch {
+                animation: none;
+            }
+            .top-tagline {
+                animation: none;
+            }
+        }
+
+        /* Marquesina */
+        .marquee-container {
+            position: fixed;
+            bottom: 3%;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .marquee-content {
+            display: flex;
+            width: fit-content;
+            will-change: transform;
+            /* Optimización para navegadores */
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            perspective: 1000px;
+            -webkit-perspective: 1000px;
+        }
+
+        .marquee-item {
+            display: flex;
+            white-space: nowrap;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .marquee-item span {
+            display: inline-block;
+        }
+
+        .marquee-item a {
+            color: #444444;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .marquee-item a:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        /* Espaciado uniforme para todos los elementos */
+        .text-item {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .text-item:first-child {
+            margin-left: 0;
+        }
+
+        .text-item.bullet {
+            margin: 0 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .char {
+                font-size: clamp(3rem, 12vw + 1rem, 8rem);
+                line-height: 0.85;
+            }
+            .word {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .line-break {
+                flex-basis: 100%;
+                height: 0;
+            }
+            .top-tagline {
+                font-size: 15px;
+            }
+            .marquee-item {
+                font-size: 16px;
+            }
+            .text-item {
+                margin: 0 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .char {
+                font-size: clamp(1.5rem, 8vw + 0.5rem, 4rem);
+            }
+            .marquee-item {
+                font-size: 14px;
+            }
+            .text-item {
+                margin: 0 10px;
+            }
+            .marquee-container {
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-tagline">Pronto novedades</div>
+    <div class="scanlines"></div>
+    
+    <main class="hero">
+        <div class="word-container">
+            <div class="word" id="wordContainer"></div>
+        </div>
+    </main>
+    
+    <div class="marquee-container">
+        <div class="marquee-content" id="marqueeContent">
+            <!-- El contenido se generará dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const wordContainer = document.getElementById("wordContainer");
+        const scanlines = document.querySelector(".scanlines");
+        let isTransitioning = false;
+
+        // Crear la palabra letra por letra
+        function createWord(text) {
+            wordContainer.innerHTML = "";
+            const isMobile = window.innerWidth <= 768;
+            
+            text.split("").forEach((char, index) => {
+                const wrapper = document.createElement("div");
+                wrapper.className = "char-wrapper";
+                
+                const charElement = document.createElement("span");
+                charElement.className = "char";
+                charElement.textContent = char;
+                charElement.setAttribute("data-char", char);
+                
+                wrapper.appendChild(charElement);
+                wordContainer.appendChild(wrapper);
+                
+                // Agregar line break después de 'ferbruno' (índice 8, después de la 'o')
+                if (isMobile && index === 7 && text === "ferbruno.work") {
+                    const lineBreak = document.createElement("div");
+                    lineBreak.className = "line-break";
+                    wordContainer.appendChild(lineBreak);
+                }
+            });
+        }
+
+        // Generar caracteres aleatorios similares
+        const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/~";
+        
+        function getRandomChar() {
+            return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+        }
+
+        function getGlitchedVariant(word) {
+            return word.split("").map(char => 
+                Math.random() > 0.7 ? getRandomChar() : char
+            ).join("");
+        }
+
+        function createCorruptedWord(word, intensity = 0.5) {
+            return word.split("").map(char => 
+                Math.random() < intensity ? getRandomChar() : char
+            ).join("");
+        }
+
+        // Iniciar efecto glitch
+        function startGlitch() {
+            scanlines.classList.add("active");
+            const chars = document.querySelectorAll(".char");
+            chars.forEach(char => {
+                char.classList.add("glitch", "rgb-split");
+            });
+        }
+
+        // Fase de scramble
+        function scramblePhase(word, callback) {
+            const chars = document.querySelectorAll(".char");
+            let scrambleCount = 0;
+            const maxScrambles = 8;
+
+            const scrambleInterval = setInterval(() => {
+                const variant = getGlitchedVariant(word);
+                chars.forEach((char, index) => {
+                    if (Math.random() > 0.3) {
+                        char.textContent = variant[index] || getRandomChar();
+                    }
+                });
+
+                scrambleCount++;
+                if (scrambleCount >= maxScrambles) {
+                    clearInterval(scrambleInterval);
+                    callback();
+                }
+            }, 60);
+        }
+
+        // Desintegración
+        function disintegrate(callback) {
+            const chars = document.querySelectorAll(".char");
+            
+            gsap.to(chars, {
+                x: gsap.utils.random(-200, 200),
+                y: gsap.utils.random(-200, 200),
+                rotation: gsap.utils.random(-360, 360),
+                scale: 0,
+                opacity: 0,
+                duration: 0.4,
+                stagger: {
+                    each: 0.03,
+                    from: "random"
+                },
+                ease: "power2.in",
+                onComplete: callback
+            });
+        }
+
+        // Reconstrucción con glitch
+        function reconstructGlitch(word) {
+            createWord(word);
+            const chars = document.querySelectorAll(".char");
+            
+            chars.forEach(char => {
+                char.classList.add("glitch", "rgb-split");
+                // Los caracteres ya están en su posición, solo hacemos aparecer
+                gsap.set(char, {
+                    opacity: 0
+                });
+            });
+
+            gsap.to(chars, {
+                opacity: 1,
+                duration: 0.3,
+                stagger: {
+                    each: 0.03,
+                    from: "random"
+                },
+                ease: "power3.out"
+            });
+
+            chars.forEach((char, index) => {
+                const originalChar = word[index];
+                let localScrambles = 0;
+                const maxLocalScrambles = Math.floor(Math.random() * 6) + 4;
+                
+                const localInterval = setInterval(() => {
+                    if (localScrambles < maxLocalScrambles) {
+                        const variant = getGlitchedVariant(word);
+                        char.textContent = variant[index] || createCorruptedWord(word, 0.5)[index] || originalChar;
+                        localScrambles++;
+                    } else {
+                        char.textContent = originalChar;
+                        clearInterval(localInterval);
+                    }
+                }, 70);
+            });
+        }
+
+        // Estabilizar
+        function stabilize() {
+            const chars = document.querySelectorAll(".char");
+            
+            setTimeout(() => {
+                chars.forEach(char => {
+                    char.classList.remove("glitch", "rgb-split");
+                });
+                scanlines.classList.remove("active");
+                isTransitioning = false;
+            }, 800);
+        }
+
+        // Transición glitch (va y vuelve a la misma palabra)
+        function glitchTransition() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const word = "ferbruno.work";
+
+            startGlitch();
+            
+            setTimeout(() => {
+                scramblePhase(word, () => {
+                    disintegrate(() => {
+                        reconstructGlitch(word);
+                        stabilize();
+                    });
+                });
+            }, 300);
+        }
+
+        // Inicialización
+        createWord("ferbruno.work");
+        
+        const initialChars = document.querySelectorAll(".char");
+        gsap.from(initialChars, {
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.04,
+            ease: "power2.out"
+        });
+
+        // Primera transición después de 1.5 segundos
+        setTimeout(() => {
+            glitchTransition();
+        }, 1500);
+
+        // Ejecutar glitch cada 6 segundos (después de la primera)
+        setInterval(glitchTransition, 6000);
+
+        // Marquesina infinita
+        class InfiniteMarquee {
+            constructor(container, text, speed = 1) {
+                this.container = container;
+                this.text = text;
+                this.speed = speed;
+                this.isPaused = false;
+                this.animationId = null;
+                this.position = 0;
+                
+                this.init();
+            }
+
+            init() {
+                // Crear el módulo repetitivo: [margin 70px] [contenido] [margin 70px]
+                const moduleHTML = `
+                    <span style="display: inline-block; width: 70px;"></span>
+                    <span class="text-item"><a href="mailto:ferbruno.work@gmail.com">ferbruno.work[at]gmail.com</a></span>
+                    <span class="text-item bullet">•</span>
+                    <span class="text-item"><a href="https://www.linkedin.com/in/fernando-bruno/" target="_blank">linkedin.com/fernandobruno</a></span>
+                    <span style="display: inline-block; width: 70px;"></span>
+                `;
+                
+                // Duplicar el módulo suficientes veces
+                let content = '';
+                for (let i = 0; i < 20; i++) {
+                    content += moduleHTML;
+                }
+                
+                // Crear dos conjuntos idénticos para el loop infinito
+                this.container.innerHTML = `
+                    <div class="marquee-item">${content}</div>
+                    <div class="marquee-item">${content}</div>
+                `;
+
+                // Event listeners
+                this.container.parentElement.addEventListener('mouseenter', () => this.pause());
+                this.container.parentElement.addEventListener('mouseleave', () => this.resume());
+
+                // Ajustar velocidad según el ancho de pantalla
+                this.adjustSpeed();
+                window.addEventListener('resize', () => this.adjustSpeed());
+
+                // Iniciar animación
+                this.animate();
+            }
+
+            adjustSpeed() {
+                const width = window.innerWidth;
+                if (width < 480) {
+                    this.speed = 0.5;
+                } else if (width < 768) {
+                    this.speed = 0.7;
+                } else {
+                    this.speed = 1;
+                }
+            }
+
+            animate() {
+                if (!this.isPaused) {
+                    this.position -= this.speed;
+                    
+                    // Calcular el ancho de un conjunto de items
+                    const firstItem = this.container.querySelector('.marquee-item');
+                    const resetPoint = -(firstItem.offsetWidth);
+                    
+                    // Reset cuando llega al punto medio
+                    if (this.position <= resetPoint) {
+                        this.position = 0;
+                    }
+                    
+                    this.container.style.transform = `translateX(${this.position}px)`;
+                }
+                
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            pause() {
+                this.isPaused = true;
+            }
+
+            resume() {
+                this.isPaused = false;
+            }
+
+            destroy() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+            }
+        }
+
+        // Inicializar marquesina cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            const marqueeContent = document.getElementById('marqueeContent');
+            const marquee = new InfiniteMarquee(
+                marqueeContent,
+                'ferbruno.work[at]gmail.com • linkedin.com/fernandobruno',
+                1 // velocidad base
+            );
+        });
+    </script>
+</body>
+</html>
