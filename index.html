@@ -6,12 +6,12 @@
     <meta name="description" content="Fernando Bruno - Estratega de comunicación digital especializado en contenidos, marketing y tecnología. Liderazgo de proyectos multimedia.">
     <meta name="author" content="Fernando Bruno">
     <meta property="og:title" content="Fernando Bruno - Comunicación Digital">
-    <meta property="og:description" content="Estrategias de comunicación digital. Contenidos, marketing y nuevas tecnologías.">
+    <meta property="og:description" content="Estratega de comunicación digital especializado en contenidos, marketing y tecnología.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ferbruno.work">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Fernando Bruno - Comunicación Digital">
-    <meta name="twitter:description" content="Estrategias de comunicación digital: contenidos, marketing y nuevas tecnologías.">
+    <meta name="twitter:description" content="Estratega de comunicación digital especializado en contenidos, marketing y tecnología.">
     <title>ferbruno.work</title>
     
     <!-- Favicon -->
@@ -516,6 +516,16 @@
                     });
                 });
             }, 300);
+        }
+
+        // Detección de idioma y cambio de tagline
+        const userLang = navigator.language || navigator.userLanguage;
+        const tagline = document.querySelector('.top-tagline');
+        
+        if (userLang.startsWith('en')) {
+            tagline.textContent = 'Coming soon';
+        } else {
+            tagline.textContent = 'Pronto, novedades';
         }
 
         // Inicialización
