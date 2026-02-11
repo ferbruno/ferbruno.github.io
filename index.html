@@ -21,14 +21,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts - Inter 300 y 900 con display=swap para optimizar carga -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet">
+    <!-- Preload crítico: Inter 900 para hero -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap">
     
-    <!-- JetBrains Mono para tagline - solo caracteres necesarios -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&text=Prontvedasmig%20Co&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter 300 y 900 con carga diferida -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- JetBrains Mono para tagline - carga diferida -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&text=Prontvedasmig%20Co&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&text=Prontvedasmig%20Co&display=swap" rel="stylesheet"></noscript>
     
     <!-- GSAP para animaciones glitch -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     
     <style>
         /* Reset y box-sizing */
@@ -349,6 +354,8 @@
     </div>
 
     <script>
+        // Esperar a que GSAP y el DOM estén listos
+        document.addEventListener('DOMContentLoaded', function() {
         const wordContainer = document.getElementById("wordContainer");
         const scanlines = document.querySelector(".scanlines");
         let isTransitioning = false;
@@ -643,15 +650,15 @@
             }
         }
 
-        // Inicializar marquesina cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', () => {
-            const marqueeContent = document.getElementById('marqueeContent');
-            const marquee = new InfiniteMarquee(
-                marqueeContent,
-                'ferbruno.work[at]gmail.com • linkedin.com/fernandobruno',
-                1 // velocidad base
-            );
-        });
+        // Inicializar marquesina
+        const marqueeContent = document.getElementById('marqueeContent');
+        const marquee = new InfiniteMarquee(
+            marqueeContent,
+            'ferbruno.work[at]gmail.com • linkedin.com/fernandobruno',
+            1 // velocidad base
+        );
+        
+        }); // Cierre de DOMContentLoaded
     </script>
 </body>
 </html>
