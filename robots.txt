@@ -1,0 +1,31 @@
+# robots.txt para ferbruno.work
+
+# Permitir a todos los bots indexar todo el sitio
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ferbruno.work/sitemap.xml
+
+# Bots específicos bien comportados
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Crawl-delay para bots más agresivos (opcional)
+User-agent: *
+Crawl-delay: 1

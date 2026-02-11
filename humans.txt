@@ -1,0 +1,18 @@
+/* TEAM */
+
+Designer & Developer: Fernando Bruno
+Contact: ferbruno.work@gmail.com
+LinkedIn: linkedin.com/in/fernando-bruno
+Location: Buenos Aires, Argentina
+
+/* SITE */
+
+Last update: 2026/02/10
+Standards: HTML5, CSS3, JavaScript ES6
+Components: GSAP, Google Fonts (Inter, JetBrains Mono)
+
+/* THANKS */
+
+Fonts: Inter by Rasmus Andersson, JetBrains Mono
+Animation: GSAP by GreenSock
+Hosting: GitHub Pages
