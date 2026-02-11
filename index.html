@@ -46,6 +46,35 @@
         /* Variables CSS */
         :root {
             --color-bg: #ffffff;
+            --color-text: #000000;
+            --color-tagline: #000000;
+            --color-marquee: #444444;
+            --color-marquee-hover: #000000;
+            --scanline-color: rgba(0, 0, 0, 0.1);
+            --glow-base: rgba(255, 255, 0, 1);
+            --glow-mid: rgba(255, 255, 0, 0.8);
+            --glow-far: rgba(255, 255, 0, 0.6);
+            --glow-breathe-base: rgba(255, 255, 0, 1);
+            --glow-breathe-mid: rgba(255, 255, 0, 0.9);
+            --glow-breathe-far: rgba(255, 255, 0, 0.8);
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #0a0e14;
+                --color-text: #e8e8e8;
+                --color-tagline: #ffffff;
+                --color-marquee: #b0b0b0;
+                --color-marquee-hover: #ffffff;
+                --scanline-color: rgba(255, 255, 255, 0.05);
+                --glow-base: rgba(255, 255, 0, 1);
+                --glow-mid: rgba(255, 255, 0, 1);
+                --glow-far: rgba(255, 255, 0, 0.9);
+                --glow-breathe-base: rgba(255, 255, 0, 1);
+                --glow-breathe-mid: rgba(255, 255, 0, 1);
+                --glow-breathe-far: rgba(255, 255, 0, 1);
+            }
         }
         
         /* HTML y body al 100% */
@@ -103,7 +132,7 @@
             text-align: center;
             letter-spacing: -0.04em;
             font-size: clamp(2.5rem, 8vw + 1rem, 12rem);
-            color: #000000;
+            color: var(--color-text);
             position: relative;
             will-change: transform, filter;
         }
@@ -171,8 +200,8 @@
             pointer-events: none;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(0, 0, 0, 0.1) 0px,
-                rgba(0, 0, 0, 0.1) 1px,
+                var(--scanline-color) 0px,
+                var(--scanline-color) 1px,
                 transparent 1px,
                 transparent 2px
             );
@@ -195,29 +224,29 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 18px;
             font-weight: 300;
-            color: #000000;
+            color: var(--color-tagline);
             letter-spacing: 0.06em;
             text-transform: uppercase;
             z-index: 50;
             text-shadow: 
-                0 0 15px rgba(255, 255, 0, 0.8),
-                0 0 30px rgba(255, 255, 0, 0.6),
-                0 0 45px rgba(255, 255, 0, 0.5);
+                0 0 15px var(--glow-base),
+                0 0 30px var(--glow-mid),
+                0 0 45px var(--glow-far);
             animation: breatheGlow 4s ease-in-out infinite;
         }
 
         @keyframes breatheGlow {
             0%, 100% {
                 text-shadow: 
-                    0 0 15px rgba(255, 255, 0, 0.8),
-                    0 0 30px rgba(255, 255, 0, 0.6),
-                    0 0 45px rgba(255, 255, 0, 0.5);
+                    0 0 15px var(--glow-base),
+                    0 0 30px var(--glow-mid),
+                    0 0 45px var(--glow-far);
             }
             50% {
                 text-shadow: 
-                    0 0 25px rgba(255, 255, 0, 1),
-                    0 0 50px rgba(255, 255, 0, 0.8),
-                    0 0 75px rgba(255, 255, 0, 0.6);
+                    0 0 25px var(--glow-breathe-base),
+                    0 0 50px var(--glow-breathe-mid),
+                    0 0 75px var(--glow-breathe-far);
             }
         }
         
@@ -271,14 +300,14 @@
         }
 
         .marquee-item a {
-            color: #444444;
+            color: var(--color-marquee);
             text-decoration: none;
             transition: color 0.3s ease;
             position: relative;
         }
 
         .marquee-item a:hover {
-            color: #000000;
+            color: var(--color-marquee-hover);
             text-decoration: underline;
         }
 
