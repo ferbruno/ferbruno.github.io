@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer 25</title>
+    <style>
+        @font-face {
+            font-family: 'Latinx';
+            src: url('fonts/Latinx-Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-RegularOblique.woff') format('woff');
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Latinx Text', Arial, sans-serif;
+            padding: 3%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 750px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: #92d400;
+            overflow: hidden;
+        }
+
+        .fondo-animado {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .spot {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .spot1 {
+            width: 500px;
+            height: 500px;
+            background: #B1E00F;
+            filter: blur(160px);
+            opacity: 0.85;
+            top: -100px;
+            left: -100px;
+            animation: moveSpot1 15s ease-in-out infinite;
+        }
+
+        .spot2 {
+            width: 600px;
+            height: 600px;
+            background: #FFFF33;
+            filter: blur(190px);
+            opacity: 0.8;
+            bottom: -100px;
+            right: -100px;
+            animation: moveSpot2 18s ease-in-out infinite;
+        }
+
+        .spot3 {
+            width: 550px;
+            height: 550px;
+            background: #EFF92C;
+            filter: blur(180px);
+            opacity: 0.75;
+            top: 10%;
+            right: -50px;
+            animation: moveSpot3 20s ease-in-out infinite;
+        }
+
+        .spot4 {
+            width: 450px;
+            height: 450px;
+            background: #C1E616;
+            filter: blur(150px);
+            opacity: 0.7;
+            bottom: -100px;
+            left: -50px;
+            animation: moveSpot4 22s ease-in-out infinite;
+        }
+
+        .spot5 {
+            width: 400px;
+            height: 400px;
+            background: #2ACEB6;
+            filter: blur(170px);
+            opacity: 0.65;
+            top: 40%;
+            left: 50%;
+            animation: moveSpot5 16s ease-in-out infinite;
+        }
+
+        .spot6 {
+            width: 350px;
+            height: 350px;
+            background: #FFFF33;
+            filter: blur(140px);
+            opacity: 0.6;
+            top: 60%;
+            right: 20%;
+            animation: moveSpot6 19s ease-in-out infinite;
+        }
+
+        @keyframes moveSpot1 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(350px, 300px) scale(1.5);
+            }
+            50% {
+                transform: translate(650px, 150px) scale(0.7);
+            }
+            75% {
+                transform: translate(250px, 450px) scale(1.2);
+            }
+        }
+
+        @keyframes moveSpot2 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(-450px, -300px) scale(1.4);
+            }
+            66% {
+                transform: translate(-200px, -550px) scale(0.8);
+            }
+        }
+
+        @keyframes moveSpot3 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            30% {
+                transform: translate(-300px, 220px) scale(1.6);
+            }
+            60% {
+                transform: translate(-450px, -120px) scale(0.7);
+            }
+            90% {
+                transform: translate(100px, 300px) scale(1.2);
+            }
+        }
+
+        @keyframes moveSpot4 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            20% {
+                transform: translate(350px, -220px) scale(1.5);
+            }
+            50% {
+                transform: translate(200px, -400px) scale(0.75);
+            }
+            80% {
+                transform: translate(500px, 100px) scale(1.3);
+            }
+        }
+
+        @keyframes moveSpot5 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+            25% {
+                transform: translate(-250px, -200px) scale(1.4) rotate(90deg);
+            }
+            50% {
+                transform: translate(200px, 250px) scale(0.8) rotate(180deg);
+            }
+            75% {
+                transform: translate(-150px, 100px) scale(1.1) rotate(270deg);
+            }
+        }
+
+        @keyframes moveSpot6 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            35% {
+                transform: translate(300px, -250px) scale(1.3);
+            }
+            70% {
+                transform: translate(-200px, 200px) scale(0.75);
+            }
+        }
+
+        .contenido {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .seccion-superior {
+            width: 100%;
+            height: 50%;
+            padding: 60px;
+            display: flex;
+            align-items: flex-start;
+            font-family: 'Latinx', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 64px;
+            line-height: 55px;
+        }
+
+        .seccion-inferior {
+            width: 100%;
+            height: 50%;
+            padding: 60px;
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Latinx Text', sans-serif;
+            font-weight: 400;
+            text-transform: lowercase;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .mobile-break {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .seccion-superior {
+                padding: 40px 30px;
+                font-size: 48px;
+                line-height: 41px;
+            }
+
+            .mobile-break {
+                display: block;
+            }
+
+            .seccion-inferior {
+                padding: 40px 30px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="fondo-animado">
+            <div class="spot spot1"></div>
+            <div class="spot spot2"></div>
+            <div class="spot spot3"></div>
+            <div class="spot spot4"></div>
+            <div class="spot spot5"></div>
+            <div class="spot spot6"></div>
+        </div>
+        <div class="contenido">
+            <div class="seccion-superior">
+                <div class="texto">
+                    <p>Save<br class="mobile-break"> the date <br>Malba <br>Septiembre <br>21—25 <br>2026</p>
+                </div>
+            </div>
+            
+            <div class="seccion-inferior">
+                <div class="texto">
+                    <p>Gala Aniversario<br>17 de septiembre, 2026<br>Mesas a la venta a partir de marzo<br>malba25@malba.org.ar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

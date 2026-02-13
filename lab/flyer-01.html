@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer Malba 25</title>
+    <style>
+        @font-face {
+            font-family: 'Latinx';
+            src: url('fonts/Latinx-Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Latinx Text';
+            src: url('fonts/LatinxText-RegularOblique.woff') format('woff');
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Latinx Text', Arial, sans-serif;
+            padding: 3%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 750px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: #bfff34;
+            overflow: hidden;
+        }
+
+        .contenedor::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.8;
+            width: 500px;
+            height: 500px;
+            background: #bfff34;
+            top: -100px;
+            left: -100px;
+            animation: moveSpot1 15s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .contenedor::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.8;
+            width: 600px;
+            height: 600px;
+            background: #FFFF33;
+            bottom: -100px;
+            right: -100px;
+            animation: moveSpot2 18s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .seccion-superior::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: 0.7;
+            width: 550px;
+            height: 550px;
+            background: #FFFF33;
+            top: 10%;
+            right: -50px;
+            animation: moveSpot3 20s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .seccion-inferior::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.7;
+            width: 450px;
+            height: 450px;
+            background: #bfff34;
+            bottom: -100px;
+            left: -50px;
+            animation: moveSpot4 22s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveSpot1 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(300px, 250px) scale(1.3);
+            }
+            50% {
+                transform: translate(600px, 100px) scale(0.8);
+            }
+            75% {
+                transform: translate(200px, 400px) scale(1.1);
+            }
+        }
+
+        @keyframes moveSpot2 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(-400px, -250px) scale(1.2);
+            }
+            66% {
+                transform: translate(-150px, -500px) scale(0.9);
+            }
+        }
+
+        @keyframes moveSpot3 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            30% {
+                transform: translate(-250px, 180px) scale(1.4);
+            }
+            60% {
+                transform: translate(-400px, -80px) scale(0.8);
+            }
+            90% {
+                transform: translate(80px, 250px) scale(1.1);
+            }
+        }
+
+        @keyframes moveSpot4 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            20% {
+                transform: translate(300px, -180px) scale(1.3);
+            }
+            50% {
+                transform: translate(150px, -350px) scale(0.85);
+            }
+            80% {
+                transform: translate(450px, 80px) scale(1.15);
+            }
+        }
+
+        .seccion-superior {
+            width: 100%;
+            height: 50%;
+            padding: 60px;
+            display: flex;
+            align-items: flex-start;
+            font-family: 'Latinx', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 64px;
+            line-height: 55px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .seccion-inferior {
+            width: 100%;
+            height: 50%;
+            padding: 60px;
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Latinx Text', sans-serif;
+            font-weight: 400;
+            text-transform: lowercase;
+            font-size: 24px;
+            line-height: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .texto {
+            position: relative;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="seccion-superior">
+            <div class="texto">
+                <p>Save the date <br>Malba <br>Septiembre <br>21–25 <br>2026</p>
+            </div>
+        </div>
+        
+        <div class="seccion-inferior">
+            <div class="texto">
+                <p>Gala Aniversario<br>17 de septiembre, 2026<br>Mesas a la venta a partir de marzo<br>malba25@malba.org.ar</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
