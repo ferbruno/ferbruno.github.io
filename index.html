@@ -8,7 +8,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-B88C5LP9B8');
     </script>
 
@@ -49,12 +48,12 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap">
     
     <!-- Google Fonts - Inter 300 y 900 con carga diferida -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet"></noscript>
     
-    <!-- JetBrains Mono para tagline - carga diferida -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&text=Prontvedasmig%20Co&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&text=Prontvedasmig%20Co&display=swap" rel="stylesheet"></noscript>
+    <!-- JetBrains Mono para tagline y sección de contenido -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet"></noscript>
     
     <!-- GSAP para animaciones glitch -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
@@ -112,15 +111,8 @@
             --color-bg: #ffffff;
             --color-text: #000000;
             --color-tagline: #000000;
-            --color-marquee: #444444;
-            --color-marquee-hover: #000000;
             --scanline-color: rgba(0, 0, 0, 0.1);
-            --glow-base: rgba(255, 255, 0, 1);
-            --glow-mid: rgba(255, 255, 0, 0.8);
-            --glow-far: rgba(255, 255, 0, 0.6);
-            --glow-breathe-base: rgba(255, 255, 0, 1);
-            --glow-breathe-mid: rgba(255, 255, 0, 0.9);
-            --glow-breathe-far: rgba(255, 255, 0, 0.8);
+            --color-section-bg: #141a24;
         }
 
         /* Dark mode */
@@ -129,19 +121,16 @@
                 --color-bg: #0a0e14;
                 --color-text: #e8e8e8;
                 --color-tagline: #ffffff;
-                --color-marquee: #b0b0b0;
-                --color-marquee-hover: #ffffff;
                 --scanline-color: rgba(255, 255, 255, 0.05);
-                --glow-base: rgba(255, 255, 0, 1);
-                --glow-mid: rgba(255, 255, 0, 1);
-                --glow-far: rgba(255, 255, 0, 0.9);
-                --glow-breathe-base: rgba(255, 255, 0, 1);
-                --glow-breathe-mid: rgba(255, 255, 0, 1);
-                --glow-breathe-far: rgba(255, 255, 0, 1);
+                --color-section-bg: #141a24;
             }
         }
         
-        /* HTML y body al 100% */
+        /* HTML y body */
+        html {
+            scroll-behavior: smooth;
+        }
+
         html, body {
             height: 100%;
             width: 100%;
@@ -150,13 +139,12 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--color-bg);
-            /* Mejora de renderizado de fuentes */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
         }
         
-        /* Hero section */
+        /* ─── HERO SECTION ─── */
         .hero {
             display: flex;
             align-items: center;
@@ -166,19 +154,17 @@
             padding: 1rem;
         }
         
-        /* Contenedor de palabra para glitch */
         .word-container {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             perspective: 1000px;
-            transform: translateY(-8vh);
+            transform: translateY(-6vh);
         }
 
         .word {
             display: flex;
-            gap: 0;
             position: relative;
         }
 
@@ -188,7 +174,6 @@
             transform-style: preserve-3d;
         }
 
-        /* Texto principal con responsive font-size */
         .char {
             display: inline-block;
             font-weight: 900;
@@ -229,32 +214,33 @@
         }
 
         @keyframes glitch-anim {
-            0% { transform: translate(0); }
-            20% { transform: translate(-3px, 3px); }
-            40% { transform: translate(-3px, -3px); }
-            60% { transform: translate(3px, 3px); }
-            80% { transform: translate(3px, -3px); }
+            0%   { transform: translate(0); }
+            20%  { transform: translate(-3px, 3px); }
+            40%  { transform: translate(-3px, -3px); }
+            60%  { transform: translate(3px, 3px); }
+            80%  { transform: translate(3px, -3px); }
             100% { transform: translate(0); }
         }
 
         @keyframes glitch-before {
-            0% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-            20% { transform: translate(-5px, -5px); clip-path: polygon(0 10%, 100% 10%, 100% 30%, 0 30%); }
-            40% { transform: translate(5px, 5px); clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
-            60% { transform: translate(-5px, 5px); clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%); }
-            80% { transform: translate(5px, -5px); clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%); }
-            100% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            0%   { transform: translate(0);       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            20%  { transform: translate(-5px, -5px); clip-path: polygon(0 10%, 100% 10%, 100% 30%, 0 30%); }
+            40%  { transform: translate(5px, 5px);   clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
+            60%  { transform: translate(-5px, 5px);  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%); }
+            80%  { transform: translate(5px, -5px);  clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%); }
+            100% { transform: translate(0);       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
         }
 
         @keyframes glitch-after {
-            0% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-            20% { transform: translate(5px, 5px); clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
-            40% { transform: translate(-5px, -5px); clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%); }
-            60% { transform: translate(5px, -5px); clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%); }
-            80% { transform: translate(-5px, 5px); clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%); }
-            100% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            0%   { transform: translate(0);       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            20%  { transform: translate(5px, 5px);   clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
+            40%  { transform: translate(-5px, -5px); clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%); }
+            60%  { transform: translate(5px, -5px);  clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%); }
+            80%  { transform: translate(-5px, 5px);  clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%); }
+            100% { transform: translate(0);       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
         }
 
+        /* Scanlines */
         .scanlines {
             position: fixed;
             top: 0;
@@ -278,7 +264,7 @@
             opacity: 0.3;
         }
 
-        /* Top tagline sutil */
+        /* Top tagline */
         .top-tagline {
             position: fixed;
             top: 30px;
@@ -286,110 +272,182 @@
             right: 0;
             text-align: center;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 18px;
+            font-size: clamp(11px, 1.2vw, 15px);
             font-weight: 300;
             color: var(--color-tagline);
-            letter-spacing: 0.06em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
             z-index: 50;
-            text-shadow: 
-                0 0 15px var(--glow-base),
-                0 0 30px var(--glow-mid),
-                0 0 45px var(--glow-far);
-            animation: breatheGlow 4s ease-in-out infinite;
+            padding: 0 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            animation: none;
+            transition: opacity 0.4s ease;
         }
 
-        @keyframes breatheGlow {
-            0%, 100% {
-                text-shadow: 
-                    0 0 15px var(--glow-base),
-                    0 0 30px var(--glow-mid),
-                    0 0 45px var(--glow-far);
-            }
-            50% {
-                text-shadow: 
-                    0 0 25px var(--glow-breathe-base),
-                    0 0 50px var(--glow-breathe-mid),
-                    0 0 75px var(--glow-breathe-far);
-            }
+        .top-tagline.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
-        
+
         /* Optimización de performance */
         @media (prefers-reduced-motion: reduce) {
-            .char {
-                animation: none;
-            }
-            .char.glitch {
-                animation: none;
-            }
-            .top-tagline {
-                animation: none;
-            }
+            .char { animation: none; }
+            .char.glitch { animation: none; }
+            .top-tagline { animation: none; }
+            .scroll-indicator .dot { animation: none; }
         }
 
-        /* Marquesina */
-        .marquee-container {
+        /* ─── SCROLL INDICATOR ─── */
+        .scroll-indicator {
             position: fixed;
-            bottom: 3%;
-            left: 0;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            z-index: 11;
+            padding: 20px;
+            transition: opacity 0.4s ease;
+        }
+
+        .scroll-indicator.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-indicator .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--color-text);
+            border-radius: 50%;
+            animation: dotPulse 1.5s ease-in-out infinite;
+        }
+
+        .scroll-indicator .dot:nth-child(1) { animation-delay: 0s; }
+        .scroll-indicator .dot:nth-child(2) { animation-delay: 0.2s; }
+        .scroll-indicator .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.6);
+                opacity: 1;
+            }
+        }
+
+        /* ─── CONTENT SECTION ─── */
+        .content-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 90px 80px 90px;
+            background-color: var(--color-section-bg);
+            border-top: 1px solid rgba(128, 128, 128, 0.15);
+        }
+        .content-wrapper {
+            max-width: 1100px;
             width: 100%;
-            overflow: hidden;
-            padding: 15px 0;
-            z-index: 1000;
-        }
-
-        .marquee-content {
             display: flex;
-            width: fit-content;
-            will-change: transform;
-            /* Optimización para navegadores */
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            perspective: 1000px;
-            -webkit-perspective: 1000px;
+            flex-direction: column;
+            gap: 2.4rem;
         }
-
-        .marquee-item {
+        .intro-block {
+            width: 70%;
+        }
+        .content-columns {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 80px;
+            align-items: start;
+        }
+        .col-bio p:last-child {
+            margin-bottom: 0;
+        }
+        .col-aside {
+            align-self: stretch;
             display: flex;
-            white-space: nowrap;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            flex-direction: column;
         }
-
-        .marquee-item span {
-            display: inline-block;
+        .cta {
+            margin-top: auto;
         }
-
-        .marquee-item a {
-            color: var(--color-marquee);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
+        .content-wrapper p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 0.75rem;
         }
-
-        .marquee-item a:hover {
-            color: var(--color-marquee-hover);
+        .content-wrapper p.intro {
+            font-size: 2.1rem;
+            line-height: 1.35;
+            margin-bottom: 2.4rem;
+            color: #ffffff;
+        }
+        .content-wrapper a {
+            color: #e0e0e0;
             text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(224, 224, 224, 0.35);
+            transition: text-decoration-color 0.2s ease;
+        }
+        .content-wrapper a:hover {
+            text-decoration-color: rgba(224, 224, 224, 1);
+        }
+        .areas {
+            margin-bottom: 2.5rem;
+        }
+        .areas-title {
+            font-size: 0.8rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(224, 224, 224, 0.45) !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .areas ul {
+            list-style: none;
+        }
+        .areas ul li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+        .areas ul li::before {
+            content: "✓";
+            margin-right: 0.5rem;            opacity: 0.35;
+        }
+        .cta-title {
+            font-size: 1.1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .cta nav {
+            display: flex;
+            gap: 2rem;
+        }
+        .cta nav a {
+            color: #e0e0e0;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(224, 224, 224, 0.35);
+            transition: text-decoration-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .cta nav a:hover {
+            text-decoration-color: rgba(224, 224, 224, 1);
         }
 
-        /* Espaciado uniforme para todos los elementos */
-        .text-item {
-            display: inline-block;
-            margin: 0 8px;
-        }
-
-        .text-item:first-child {
-            margin-left: 0;
-        }
-
-        .text-item.bullet {
-            margin: 0 5px;
-        }
-
-        /* Responsive */
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 768px) {
             .char {
                 font-size: clamp(3rem, 12vw + 1rem, 8rem);
@@ -406,11 +464,29 @@
             .top-tagline {
                 font-size: 15px;
             }
-            .marquee-item {
-                font-size: 16px;
+            .content-section {
+                padding: 60px 32px 60px 32px;
+                min-height: unset;
             }
-            .text-item {
-                margin: 0 12px;
+            .intro-block {
+                width: 100%;
+            }
+            .content-wrapper p.intro {
+                font-size: 1.5rem;
+                line-height: 1.35;
+            }
+            .content-columns {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .col-aside {
+                align-self: auto;
+            }
+                    .areas ul li {
+            font-size: 1rem;
+        }
+            .cta {
+                margin-top: 2rem;
             }
         }
 
@@ -418,42 +494,87 @@
             .char {
                 font-size: clamp(1.5rem, 8vw + 0.5rem, 4rem);
             }
-            .marquee-item {
-                font-size: 14px;
-            }
-            .text-item {
-                margin: 0 10px;
-            }
-            .marquee-container {
-                padding: 12px 0;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="top-tagline">Pronto novedades</div>
-    <div class="scanlines"></div>
+    <div class="top-tagline" id="topTagline">Pronto novedades</div>
+    <div class="scanlines" id="scanlines"></div>
     
-    <main class="hero">
+    <main class="hero" id="heroSection">
         <div class="word-container">
             <div class="word" id="wordContainer"></div>
         </div>
     </main>
-    
-    <div class="marquee-container">
-        <div class="marquee-content" id="marqueeContent">
-            <!-- El contenido se generará dinámicamente con JavaScript -->
-        </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
+    
+    <!-- Segunda sección -->
+    <section class="content-section" id="contentSection">
+        <div class="content-wrapper">
+            <div class="intro-block">
+                <p class="intro">Soy Fernando Bruno y trabajo en comunicación desde hace más de 15 años, creando y liderando proyectos en los que se cruzan la cultura, la tecnología y los medios digitales.</p>
+            </div>
+
+            <div class="content-columns">
+                <div class="col-bio">
+                    <p>Me interesa especialmente transformar ideas complejas en narrativas claras y significativas para distintos públicos. Busco el formato adecuado para cada historia y utilizo el análisis de datos para desarrollar estrategias creativas.</p>
+
+                    <p>Desde 2015 soy Coordinador de Proyectos Digitales en Malba, el Museo de Arte Latinoamericano de Buenos Aires, donde trabajo con artistas e instituciones de la región y coordino proyectos colaborativos con Google, Meta, Spotify y Bloomberg.</p>
+
+                    <p>Empecé a programar en una Commodore 64 a los doce años. Soy Licenciado en Filosofía por la Universidad de Buenos Aires y realicé estudios de posgrado en la Universidad Torcuato Di Tella. También trabajo con organizaciones y empresas como consultor independiente, soy profesor titular de Teorías de la Comunicación en la Escuela de Diseño de la UTDT y escribo en distintos medios.</p>
+                </div>
+
+                <div class="col-aside">
+                    <div class="areas">
+                        <p class="areas-title">Áreas de trabajo</p>
+                        <ul>
+                            <li>Estrategias de comunicación digital</li>
+                            <li>Diseño de contenidos</li>
+                            <li>Implementación de campañas</li>
+                            <li>Desarrollo de experiencias digitales</li>
+                            <li>Integración de nuevas tecnologías e IA</li>
+                            <li>Edición de publicaciones</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta">
+                        <p class="cta-title">¡Conversemos!</p>
+                        <nav>
+                            <a href="mailto:ferbruno.work@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                                Email
+                            </a>
+                            <a href="https://www.linkedin.com/in/fernando-bruno/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                LinkedIn
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
-        // Esperar a que GSAP y el DOM estén listos
         document.addEventListener('DOMContentLoaded', function() {
+
         const wordContainer = document.getElementById("wordContainer");
-        const scanlines = document.querySelector(".scanlines");
+        const scanlines = document.getElementById("scanlines");
+        const scrollIndicator = document.getElementById("scrollIndicator");
+        const topTagline = document.getElementById("topTagline");
+        const contentSection = document.getElementById("contentSection");
         let isTransitioning = false;
 
-        // Crear la palabra letra por letra
+        // ─── WORD BUILDER ───
+        // "ferbruno." es siempre el prefijo estable; lo que sigue al punto es el sufijo animado
+        const PREFIX = "ferbruno.";
+
         function createWord(text) {
             wordContainer.innerHTML = "";
             const isMobile = window.innerWidth <= 768;
@@ -463,15 +584,15 @@
                 wrapper.className = "char-wrapper";
                 
                 const charElement = document.createElement("span");
-                charElement.className = "char";
+                const isPrefix = index < PREFIX.length;
+                charElement.className = isPrefix ? "char char-prefix" : "char char-suffix";
                 charElement.textContent = char;
                 charElement.setAttribute("data-char", char);
                 
                 wrapper.appendChild(charElement);
                 wordContainer.appendChild(wrapper);
                 
-                // Agregar line break después de 'ferbruno' (índice 8, después de la 'o')
-                if (isMobile && index === 7 && text === "ferbruno.work") {
+                if (isMobile && index === 7 && text.startsWith(PREFIX)) {
                     const lineBreak = document.createElement("div");
                     lineBreak.className = "line-break";
                     wordContainer.appendChild(lineBreak);
@@ -479,47 +600,111 @@
             });
         }
 
-        // Generar caracteres aleatorios similares
-        const glitchChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/~";
-        
+        // ─── GLITCH HELPERS ───
+
+        // Variantes curadas — cada variante tiene exactamente la misma longitud que su sufijo
+        // work=4, comms=5, ideas=5, media=5, content=7
+        const wordVariants = {
+            "work":    ["w0rk", "w_rk", "w3rk", "wOrk", "w|rk", "w@rk", "w.rk", "wark"],
+            "comms":   ["c0mms", "comm$", "c0mm5", "c_mms", "c.mms", "comm5", "c0mm_", "cOmms"],
+            "ideas":   ["1deas", "id3as", "!deas", "ide@s", "1d3as", "id_as", "1de@s", "!d3as"],
+            "media":   ["med1a", "m3dia", "med!a", "m3d1a", "medi@", "m_dia", "m3d!a", "med_a"],
+            "content": ["c0ntent", "cont3nt", "c0nt3nt", "cont_nt", "c0nt_nt", "c_ntent", "cont!nt", "c0nt3n7"]
+        };
+
+        // Sustituciones leet-speak para morphing narrativo
+        const leetMap = {
+            "a": ["@", "4"],
+            "e": ["3"],
+            "i": ["1", "!"],
+            "o": ["0"],
+            "s": ["$", "5"],
+            "t": ["7", "+"],
+            "l": ["1", "|"],
+            "g": ["9"],
+            "c": ["("],
+            "m": ["rn"]
+        };
+
         function getRandomChar() {
-            return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+            const chars = "!@#$%_+-=|:.<>?/~0123456789";
+            return chars[Math.floor(Math.random() * chars.length)];
         }
 
-        function getGlitchedVariant(word) {
-            return word.split("").map(char => 
-                Math.random() > 0.7 ? getRandomChar() : char
-            ).join("");
+        function getVariant(suffix) {
+            const variants = wordVariants[suffix];
+            if (!variants) return suffix;
+            return variants[Math.floor(Math.random() * variants.length)];
         }
 
-        function createCorruptedWord(word, intensity = 0.5) {
-            return word.split("").map(char => 
-                Math.random() < intensity ? getRandomChar() : char
-            ).join("");
+        // Morfea entre fromSuffix y toSuffix — longitud anclada a fromSuffix (chars del DOM actuales)
+        function createCorruptedWord(fromSuffix, toSuffix, corruptionLevel) {
+            const len = fromSuffix.length;
+            let result = "";
+
+            for (let i = 0; i < len; i++) {
+                const charFrom = fromSuffix[i] || "";
+                const charTo   = toSuffix[i]   || "";
+                const rand = Math.random();
+
+                if (rand < corruptionLevel * 0.25) {
+                    result += getRandomChar();
+                } else if (rand < corruptionLevel * 0.55) {
+                    result += Math.random() > 0.5 ? charFrom : charTo;
+                } else if (rand < corruptionLevel * 0.8) {
+                    const base = (charFrom || charTo).toLowerCase();
+                    const subs = leetMap[base];
+                    result += subs ? subs[Math.floor(Math.random() * subs.length)] : (charFrom || charTo);
+                } else {
+                    result += charFrom || charTo;
+                }
+            }
+            return result;
         }
 
-        // Iniciar efecto glitch
+        // ─── GLITCH PHASES ───
         function startGlitch() {
             scanlines.classList.add("active");
-            const chars = document.querySelectorAll(".char");
-            chars.forEach(char => {
+            document.querySelectorAll(".char-suffix").forEach(char => {
                 char.classList.add("glitch", "rgb-split");
             });
         }
 
-        // Fase de scramble
-        function scramblePhase(word, callback) {
-            const chars = document.querySelectorAll(".char");
+        // scramblePhase: alterna entre variantes curadas (narrativa) y ruido acotado (audacia)
+        function scramblePhase(fromWord, toWord, callback) {
+            const suffixChars = document.querySelectorAll(".char-suffix");
+            const fromSuffix = fromWord.slice(PREFIX.length);
+            const toSuffix   = toWord.slice(PREFIX.length);
             let scrambleCount = 0;
-            const maxScrambles = 8;
+            const maxScrambles = 10;
 
             const scrambleInterval = setInterval(() => {
-                const variant = getGlitchedVariant(word);
-                chars.forEach((char, index) => {
-                    if (Math.random() > 0.3) {
-                        char.textContent = variant[index] || getRandomChar();
+                const corruptionLevel = scrambleCount / maxScrambles;
+                const useCurated = Math.random() > 0.45; // 55% curadas, 45% libre
+
+                let variant;
+                if (useCurated) {
+                    // Frames curados: variante de from o to, o morphing leet
+                    if (scrambleCount % 3 === 0) {
+                        variant = Math.random() > 0.5
+                            ? getVariant(fromSuffix)
+                            : getVariant(toSuffix);
+                    } else {
+                        variant = createCorruptedWord(fromSuffix, toSuffix, corruptionLevel);
                     }
-                });
+                    suffixChars.forEach((char, index) => {
+                        if (Math.random() > 0.25) {
+                            char.textContent = variant[index] || getRandomChar();
+                        }
+                    });
+                } else {
+                    // Frames libres: ruido acotado char por char
+                    suffixChars.forEach(char => {
+                        if (Math.random() > 0.3) {
+                            char.textContent = getRandomChar();
+                        }
+                    });
+                }
 
                 scrambleCount++;
                 if (scrambleCount >= maxScrambles) {
@@ -529,58 +714,53 @@
             }, 60);
         }
 
-        // Desintegración
         function disintegrate(callback) {
-            const chars = document.querySelectorAll(".char");
+            const suffixChars = document.querySelectorAll(".char-suffix");
             
-            gsap.to(chars, {
+            gsap.to(suffixChars, {
                 x: gsap.utils.random(-200, 200),
                 y: gsap.utils.random(-200, 200),
                 rotation: gsap.utils.random(-360, 360),
                 scale: 0,
                 opacity: 0,
                 duration: 0.4,
-                stagger: {
-                    each: 0.03,
-                    from: "random"
-                },
+                stagger: { each: 0.03, from: "random" },
                 ease: "power2.in",
                 onComplete: callback
             });
         }
 
-        // Reconstrucción con glitch
-        function reconstructGlitch(word) {
-            createWord(word);
-            const chars = document.querySelectorAll(".char");
+        function reconstructGlitch(toWord) {
+            createWord(toWord);
+            const suffixChars = document.querySelectorAll(".char-suffix");
+            const toSuffix = toWord.slice(PREFIX.length);
             
-            chars.forEach(char => {
+            suffixChars.forEach(char => {
                 char.classList.add("glitch", "rgb-split");
-                // Los caracteres ya están en su posición, solo hacemos aparecer
-                gsap.set(char, {
-                    opacity: 0
-                });
+                gsap.set(char, { opacity: 0 });
             });
 
-            gsap.to(chars, {
+            gsap.to(suffixChars, {
                 opacity: 1,
                 duration: 0.3,
-                stagger: {
-                    each: 0.03,
-                    from: "random"
-                },
+                stagger: { each: 0.03, from: "random" },
                 ease: "power3.out"
             });
 
-            chars.forEach((char, index) => {
-                const originalChar = word[index];
+            suffixChars.forEach((char, index) => {
+                const originalChar = toSuffix[index];
                 let localScrambles = 0;
                 const maxLocalScrambles = Math.floor(Math.random() * 6) + 4;
                 
                 const localInterval = setInterval(() => {
                     if (localScrambles < maxLocalScrambles) {
-                        const variant = getGlitchedVariant(word);
-                        char.textContent = variant[index] || createCorruptedWord(word, 0.5)[index] || originalChar;
+                        // Mezcla curada y ruido libre durante el settle
+                        if (Math.random() > 0.4) {
+                            const variant = getVariant(toSuffix);
+                            char.textContent = variant[index] || originalChar;
+                        } else {
+                            char.textContent = getRandomChar();
+                        }
                         localScrambles++;
                     } else {
                         char.textContent = originalChar;
@@ -590,12 +770,9 @@
             });
         }
 
-        // Estabilizar
         function stabilize() {
-            const chars = document.querySelectorAll(".char");
-            
             setTimeout(() => {
-                chars.forEach(char => {
+                document.querySelectorAll(".char-suffix").forEach(char => {
                     char.classList.remove("glitch", "rgb-split");
                 });
                 scanlines.classList.remove("active");
@@ -603,36 +780,69 @@
             }, 800);
         }
 
-        // Transición glitch (va y vuelve a la misma palabra)
+        // ─── ROTACIÓN DE PALABRAS ───
+        // "work" aparece solo al inicio — la rotación cicla entre las demás
+        const rotationWords = [
+            "ferbruno.comms",
+            "ferbruno.ideas",
+            "ferbruno.media",
+            "ferbruno.content"
+        ];
+        let currentWordIndex = 0;
+        let currentWord = "ferbruno.work";
+
         function glitchTransition() {
             if (isTransitioning) return;
             isTransitioning = true;
 
-            const word = "ferbruno.work";
+            const fromWord = currentWord;
+            const toWord   = rotationWords[currentWordIndex];
+            currentWordIndex = (currentWordIndex + 1) % rotationWords.length;
+            currentWord = toWord;
 
             startGlitch();
             
             setTimeout(() => {
-                scramblePhase(word, () => {
+                scramblePhase(fromWord, toWord, () => {
                     disintegrate(() => {
-                        reconstructGlitch(word);
+                        reconstructGlitch(toWord);
                         stabilize();
                     });
                 });
             }, 300);
         }
 
-        // Detección de idioma y cambio de tagline
+        // ─── TAGLINE DINÁMICO ───
         const userLang = navigator.language || navigator.userLanguage;
-        const tagline = document.querySelector('.top-tagline');
-        
-        if (userLang.startsWith('en')) {
-            tagline.textContent = 'Coming soon';
-        } else {
-            tagline.textContent = 'Pronto novedades';
+
+        function formatDate() {
+            const now = new Date();
+            const options = { day: 'numeric', month: 'long' };
+            const locale = userLang.startsWith('en') ? 'en-US' : 'es-AR';
+            return new Intl.DateTimeFormat(locale, options).format(now);
         }
 
-        // Inicialización
+        function setTagline(temp) {
+            const date = formatDate();
+            topTagline.textContent = temp !== null
+                ? `Buenos Aires • ${date} • ${temp}°C`
+                : `Buenos Aires • ${date}`;
+        }
+
+        // Mostrar fecha de inmediato mientras llega la temperatura
+        setTagline(null);
+
+        fetch("https://api.open-meteo.com/v1/forecast?latitude=-34.60&longitude=-58.38&current_weather=true")
+            .then(res => res.json())
+            .then(data => {
+                const temp = Math.round(data.current_weather.temperature);
+                setTagline(temp);
+            })
+            .catch(() => {
+                // Si falla la API, se mantiene solo con la fecha
+            });
+
+        // ─── INICIALIZACIÓN ───
         createWord("ferbruno.work");
         
         const initialChars = document.querySelectorAll(".char");
@@ -643,115 +853,34 @@
             ease: "power2.out"
         });
 
-        // Primera transición después de 1.5 segundos
-        setTimeout(() => {
-            glitchTransition();
-        }, 1500);
-
-        // Ejecutar glitch cada 6 segundos (después de la primera)
+        setTimeout(() => { glitchTransition(); }, 1500);
         setInterval(glitchTransition, 6000);
 
-        // Marquesina infinita
-        class InfiniteMarquee {
-            constructor(container, text, speed = 1) {
-                this.container = container;
-                this.text = text;
-                this.speed = speed;
-                this.isPaused = false;
-                this.animationId = null;
-                this.position = 0;
-                
-                this.init();
+        // ─── SCROLL BEHAVIOR ───
+        scrollIndicator.addEventListener("click", () => {
+            contentSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const threshold = 80;
+
+            // Ocultar scroll indicator al bajar
+            if (scrollY > threshold) {
+                scrollIndicator.classList.add("hidden");
+            } else {
+                scrollIndicator.classList.remove("hidden");
             }
 
-            init() {
-                // Crear el módulo repetitivo: [margin 70px] [contenido] [margin 70px]
-                const moduleHTML = `
-                    <span style="display: inline-block; width: 70px;"></span>
-                    <span class="text-item"><a href="mailto:ferbruno.work@gmail.com">ferbruno.work[at]gmail.com</a></span>
-                    <span class="text-item bullet">•</span>
-                    <span class="text-item"><a href="https://www.linkedin.com/in/fernando-bruno/" target="_blank">linkedin.com/fernandobruno</a></span>
-                    <span style="display: inline-block; width: 70px;"></span>
-                `;
-                
-                // Duplicar el módulo suficientes veces
-                let content = '';
-                for (let i = 0; i < 20; i++) {
-                    content += moduleHTML;
-                }
-                
-                // Crear dos conjuntos idénticos para el loop infinito
-                this.container.innerHTML = `
-                    <div class="marquee-item">${content}</div>
-                    <div class="marquee-item">${content}</div>
-                `;
-
-                // Event listeners
-                this.container.parentElement.addEventListener('mouseenter', () => this.pause());
-                this.container.parentElement.addEventListener('mouseleave', () => this.resume());
-
-                // Ajustar velocidad según el ancho de pantalla
-                this.adjustSpeed();
-                window.addEventListener('resize', () => this.adjustSpeed());
-
-                // Iniciar animación
-                this.animate();
+            // Ocultar tagline al bajar
+            if (scrollY > threshold) {
+                topTagline.classList.add("hidden");
+            } else {
+                topTagline.classList.remove("hidden");
             }
+        });
 
-            adjustSpeed() {
-                const width = window.innerWidth;
-                if (width < 480) {
-                    this.speed = 0.5;
-                } else if (width < 768) {
-                    this.speed = 0.7;
-                } else {
-                    this.speed = 1;
-                }
-            }
-
-            animate() {
-                if (!this.isPaused) {
-                    this.position -= this.speed;
-                    
-                    // Calcular el ancho de un conjunto de items
-                    const firstItem = this.container.querySelector('.marquee-item');
-                    const resetPoint = -(firstItem.offsetWidth);
-                    
-                    // Reset cuando llega al punto medio
-                    if (this.position <= resetPoint) {
-                        this.position = 0;
-                    }
-                    
-                    this.container.style.transform = `translateX(${this.position}px)`;
-                }
-                
-                this.animationId = requestAnimationFrame(() => this.animate());
-            }
-
-            pause() {
-                this.isPaused = true;
-            }
-
-            resume() {
-                this.isPaused = false;
-            }
-
-            destroy() {
-                if (this.animationId) {
-                    cancelAnimationFrame(this.animationId);
-                }
-            }
-        }
-
-        // Inicializar marquesina
-        const marqueeContent = document.getElementById('marqueeContent');
-        const marquee = new InfiniteMarquee(
-            marqueeContent,
-            'ferbruno.work[at]gmail.com • linkedin.com/fernandobruno',
-            1 // velocidad base
-        );
-        
-        }); // Cierre de DOMContentLoaded
+        }); // Cierre DOMContentLoaded
     </script>
 </body>
 </html>
