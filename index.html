@@ -67,10 +67,10 @@
           "@type": "Person",
           "name": "Fernando Bruno",
           "url": "https://ferbruno.work",
-          "image": "https://ferbruno.work/images/brand.png",
+          "image": "https://ferbruno.work/images/fernando-bruno-portrait.jpg",
           "jobTitle": "Digital Strategy Lead & Content Designer",
           "description": "Estrategias de comunicación digital, contenidos, marketing y tecnología. Liderazgo de proyectos multimedia.",
-          "knowsAbout": ["Comunicación Digital", "Marketing", "Contenidos", "Tecnología", "Proyectos Multimedia"],
+          "knowsAbout": ["Comunicación Digital", "Marketing", "Contenidos", "Tecnología", "Edición", "Proyectos Multimedia"],
           "workLocation": {
             "@type": "Place",
             "address": {
@@ -465,7 +465,7 @@
                 font-size: 15px;
             }
             .content-section {
-                padding: 60px 32px 60px 32px;
+                padding: 42px 32px 42px 32px;
                 min-height: unset;
             }
             .intro-block {
@@ -474,19 +474,23 @@
             .content-wrapper p.intro {
                 font-size: 1.5rem;
                 line-height: 1.35;
+                margin-bottom: 0;
+            }
+            .content-wrapper {
+                gap: 42px;
             }
             .content-columns {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 42px;
             }
             .col-aside {
                 align-self: auto;
             }
-                    .areas ul li {
-            font-size: 1rem;
-        }
+            .areas ul li {
+                font-size: 1rem;
+            }
             .cta {
-                margin-top: 2rem;
+                margin-top: 42px;
             }
         }
 
@@ -515,25 +519,25 @@
     </div>
     
     <!-- Segunda sección -->
-    <div class="content-section" id="contentSection">
+    <section class="content-section" id="contentSection">
         <div class="content-wrapper">
             <div class="intro-block">
-                <p class="intro">Soy Fernando Bruno y trabajo en comunicación desde hace más de 15 años, creando y liderando proyectos en los que se cruzan la cultura, la tecnología y los medios digitales.</p>
+                <p class="intro" data-i18n="intro">Soy Fernando Bruno y trabajo en comunicación desde hace más de 15 años, creando y liderando proyectos en los que se cruzan la cultura, la tecnología y los medios digitales.</p>
             </div>
 
             <div class="content-columns">
                 <div class="col-bio">
-                    <p>Me interesa especialmente transformar ideas complejas en narrativas claras y significativas para distintos públicos. Busco el formato adecuado para cada historia y utilizo el análisis de datos para desarrollar estrategias creativas.</p>
+                    <p data-i18n="bio1">Me interesa especialmente transformar ideas complejas en narrativas claras y significativas para distintos públicos. Busco el formato adecuado para cada historia y utilizo el análisis de datos para desarrollar estrategias creativas.</p>
 
-                    <p>Desde 2015 soy Coordinador de Proyectos Digitales en Malba, el Museo de Arte Latinoamericano de Buenos Aires, donde trabajo con artistas e instituciones de la región y coordino proyectos colaborativos con Google, Meta, Spotify y Bloomberg.</p>
+                    <p data-i18n="bio2">Desde 2015 soy Coordinador de Proyectos Digitales en Malba, el Museo de Arte Latinoamericano de Buenos Aires, donde trabajo con artistas e instituciones de la región y he coordinado proyectos colaborativos con Google, Meta, Spotify y Bloomberg.</p>
 
-                    <p>Empecé a programar en una Commodore 64 a los doce años. Soy Licenciado en Filosofía por la Universidad de Buenos Aires y realicé estudios de posgrado en la Universidad Torcuato Di Tella. También trabajo con organizaciones y empresas como consultor independiente, soy profesor titular de Teorías de la Comunicación en la Escuela de Diseño de la UTDT y escribo en distintos medios.</p>
+                    <p data-i18n="bio3">Empecé a programar en una Commodore 64 a los doce años. Soy Licenciado en Filosofía por la Universidad de Buenos Aires y realicé estudios de posgrado en la Universidad Torcuato Di Tella. También trabajo con organizaciones y empresas como consultor independiente, soy profesor titular de Teorías de la Comunicación en la Escuela de Diseño de la UTDT y escribo en distintos medios.</p>
                 </div>
 
                 <div class="col-aside">
                     <div class="areas">
-                        <p class="areas-title">Áreas de trabajo</p>
-                        <ul>
+                        <p class="areas-title" data-i18n="areasTitle">Áreas de trabajo</p>
+                        <ul id="areasList">
                             <li>Estrategias de comunicación digital</li>
                             <li>Diseño de contenidos</li>
                             <li>Implementación de campañas</li>
@@ -544,9 +548,9 @@
                     </div>
 
                     <div class="cta">
-                        <p class="cta-title">¡Conversemos!</p>
+                        <p class="cta-title" data-i18n="ctaTitle">¡Conversemos!</p>
                         <nav>
-                            <a href="mailto:ferbruno.work@gmail.com">
+                            <a href="/cdn-cgi/l/email-protection#9cfaf9eefeeee9f2f3b2ebf3eef7dcfbf1fdf5f0b2fff3f1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
                                 Email
                             </a>
@@ -559,9 +563,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
 
         const wordContainer = document.getElementById("wordContainer");
@@ -865,20 +869,56 @@
             const scrollY = window.scrollY;
             const threshold = 80;
 
-            // Ocultar scroll indicator al bajar
             if (scrollY > threshold) {
                 scrollIndicator.classList.add("hidden");
             } else {
                 scrollIndicator.classList.remove("hidden");
             }
 
-            // Ocultar tagline al bajar
             if (scrollY > threshold) {
                 topTagline.classList.add("hidden");
             } else {
                 topTagline.classList.remove("hidden");
             }
         });
+
+        // ─── I18N ───
+        const translations = {
+            es: {
+                intro:      "Soy Fernando Bruno y trabajo en comunicación desde hace más de 15 años, creando y liderando proyectos en los que se cruzan la cultura, la tecnología y los medios digitales.",
+                bio1:       "Me interesa especialmente transformar ideas complejas en narrativas claras y significativas para distintos públicos. Busco el formato adecuado para cada historia y utilizo el análisis de datos para desarrollar estrategias creativas.",
+                bio2:       "Desde 2015 soy Coordinador de Proyectos Digitales en Malba, el Museo de Arte Latinoamericano de Buenos Aires, donde trabajo con artistas e instituciones de la región y he coordinado proyectos colaborativos con Google, Meta, Spotify y Bloomberg.",
+                bio3:       "Empecé a programar en una Commodore 64 a los doce años. Soy Licenciado en Filosofía por la Universidad de Buenos Aires y realicé estudios de posgrado en la Universidad Torcuato Di Tella. También trabajo con organizaciones y empresas como consultor independiente, soy profesor titular de Teorías de la Comunicación en la Escuela de Diseño de la UTDT y escribo en distintos medios.",
+                areasTitle: "Áreas de trabajo",
+                areasList:  ["Estrategias de comunicación digital", "Diseño de contenidos", "Implementación de campañas", "Desarrollo de experiencias digitales", "Integración de nuevas tecnologías e IA", "Edición de publicaciones"],
+                ctaTitle:   "¡Conversemos!"
+            },
+            en: {
+                intro:      "I'm Fernando Bruno, and I work in communications. For more than 15 years I've been creating and leading projects where culture, technology, and digital media intersect.",
+                bio1:       "I'm especially interested in turning complex ideas into clear and meaningful narratives for different audiences. I look for the right format for each story and use data analysis to develop creative strategies.",
+                bio2:       "Since 2015 I've worked as Digital Projects Coordinator at Malba, the Museum of Latin American Art of Buenos Aires, where I collaborate with artists and institutions across the region and coordinate collaborative projects with Google, Meta, Spotify, and Bloomberg.",
+                bio3:       "I started programming on a Commodore 64 when I was twelve. I hold a degree in Philosophy from the University of Buenos Aires and pursued postgraduate studies at Universidad Torcuato Di Tella. I also work independently as a consultant with organizations and companies, teach Communication Theory at the UTDT School of Design, and write for various media outlets.",
+                areasTitle: "What I do",
+                areasList:  ["Digital communication strategy", "Content design", "Campaign development and implementation", "Integration of new technologies and AI", "Editorial projects"],
+                ctaTitle:   "Let's talk!"
+            }
+        };
+
+        function applyLang(lang) {
+            const t = translations[lang];
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.textContent = t[key];
+            });
+
+            const areasList = document.getElementById('areasList');
+            areasList.innerHTML = t.areasList.map(item => `<li>${item}</li>`).join('');
+
+            document.documentElement.lang = lang;
+        }
+
+        applyLang(navigator.language.startsWith('en') ? 'en' : 'es');
 
         }); // Cierre DOMContentLoaded
     </script>
