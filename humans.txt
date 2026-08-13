@@ -7,7 +7,7 @@ Location: Buenos Aires, Argentina
 
 /* SITE */
 
-Last update: 2026/02/10
+Last update: 2026/08/12
 Standards: HTML5, CSS3, JavaScript ES6
 Components: GSAP, Google Fonts (Inter, JetBrains Mono)
 
@@ -15,4 +15,4 @@ Components: GSAP, Google Fonts (Inter, JetBrains Mono)
 
 Fonts: Inter by Rasmus Andersson, JetBrains Mono
 Animation: GSAP by GreenSock
-Hosting: GitHub Pages
+Hosting: Netlify
